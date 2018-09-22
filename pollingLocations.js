@@ -17,7 +17,8 @@ $(document).ready(function () {
             
             for ( let i=0; i<response.earlyVoteSites.length;i++){
             $(".vote-site").append(`<tr><td>
-            <td class="vote-site-name">${response.earlyVoteSites[i].pollingHours}
+            <td class="vote-site-name">${response.earlyVoteSites[i].address.locationName}<br>${response.earlyVoteSites[i].address.line1}<br>${response.earlyVoteSites[i].address.city}<br>${response.earlyVoteSites[i].address.state}<br>${response.earlyVoteSites[i].address.zip}<br>${response.earlyVoteSites[i].pollingHours}<br>Polling Location Notes: ${response.earlyVoteSites[i].notes}
+            <br>Start Date: ${response.earlyVoteSites[i].startDate}<br>End Date: ${response.earlyVoteSites[i].endDate}<br>Is thie polling location officially verified for election? : <b>${response.earlyVoteSites[i].sources[0].official}</b>
             
         `)
            
