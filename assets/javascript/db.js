@@ -91,7 +91,7 @@ $(document).ready(function () {
     });
   });
   */
-
+/*
  $(".createGoogleBtn").on("click", function () {
   console.log("google click");
   firebase.auth().signInWithRedirect(provider);
@@ -114,6 +114,7 @@ $(document).ready(function () {
     // ...
   });
 });
+*/
 
 
 
