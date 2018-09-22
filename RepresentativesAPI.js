@@ -36,46 +36,35 @@ $(document).ready(function () {
 
         /*$.address.parameter('address', encodeURIComponent(address));*/
         /*$(".address-image").html("<img class='img-responsive img-thumbnail' src='https://maps.googleapis.com/maps/api/staticmap?size=600x200&maptype=roadmap&markers=" + encodeURIComponent(address) + "' alt='" + address + "' title='" + address + "' />");*/
-
+        var addresses=[]
         const searchRep = address => {
-            $.get("https://www.googleapis.com/civicinfo/v2/representatives?key=" + APIkey + "&address=" + AddressPOST).then(response => {
+        $.get("https://www.googleapis.com/civicinfo/v2/representatives?key=" + APIkey + "&address=" + AddressPOST/*+"&levels="+govt_level*/).then(response => {
+            
             for ( let i=0; i<response.officials.length;i++){
-            console.log(`${response.offices[i].name}`+" "+`${response.officials[i].name}`)
             $(".candidates").append(`<tr><td>
             <img height="100" width="100" src='${response.officials[i].photoUrl}' onerror="this.src='images/blank-person.jpg'" /></td>
-            <td>${response.offices[i].name}`+" "+`${response.officials[i].name}</td>
+            <td class="official-name">${response.officials[i].name}
+            
         `)
-           console.log(`${response.officials[i].party}`)
-            }
-        /*for (let i = 0; i < response.departures.all.length; i++) {
-
-            let destinationName = `${response.departures.all[i].destination_name}`;
-            let trainName = `${response.departures.all[i].operator_name}`;
-            let platform = `${response.departures.all[i].platform}`;
-            let departureTime = `${response.departures.all[i].aimed_departure_time}`;
            
-             $(".destination").append(
-
-
-                '<br><br>' + destinationName
-
-            )
-            $(".train-name").append(
-                '<br><br>' + trainName
-            )
-            $(".platform").append(
-                '<br><br>' + platform
-            )
-            $(".departure").append(
-                
-                '<br><br>' + departureTime
-            )
+           console.log(response.officials.indexOf(response.officials[i]))
+           /*console.log(`${response.officials[i].address[i].line1}`)*/
+           /*<br>${response.officials[i].address[i].line2}<br>${response.officials[i].address[i].city}<br>${response.officials[i].address[i].state}<br>${response.officials[i].address[i].zip}<br>*/
+        }  
+            
+           for ( let i=0; i<response.offices.length;i++){
+                if( `${response.offices[i].officialIndices}`.includes(`${response.officials.indexOf(response.officials[i])}`)){
+                $(".official-name").prepend(`
+                ${response.offices[i].name}</td></tr>
+                `)}
+                //console.log(`${response.offices[i].name}`)
+                console.log(`${response.offices[i].officialIndices}`)
+                console.log(`${response.officials.indexOf(response.officials[i])}`)
+            }
+        
+        })
         }
-
-    })
-}*/})
-        }
-        /*searchTrain()*/
+        
         searchRep()
     })
 })
