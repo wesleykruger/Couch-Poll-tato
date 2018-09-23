@@ -19,7 +19,10 @@ body {
   flex-direction: column;
   font-family: 'Quicksand', sans-serif;
 }
-
+.Navbart {
+  background-color: #F8F8F8;
+  border-color: #E7E7E7;
+}
 .site-content {
   color: #777777;
   flex: 1;
