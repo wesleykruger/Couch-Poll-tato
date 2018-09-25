@@ -21,8 +21,7 @@
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYQHKMzQBNqWcLUvLKJNrSdXqZ90wOA88&callback=initMap"
-    async defer></script>
+
     <script src="assets/javascript/mapSearch.js"></script>
     <style>
       #locationField, #controls {
@@ -72,7 +71,7 @@
   <body>
     <div id="locationField">
       <input id="autocomplete" placeholder="Enter your address"
-             onFocus="geolocate()" type="text"></input>
+              type="text"></input>
     </div>
 
     <table id="address">
@@ -111,6 +110,7 @@
 
     <div id="map"></div>
 
+    
     <script>
       var map;
       function initMap() {
@@ -119,10 +119,10 @@
           zoom: 8
         });
       }
-    </script>
-
-
-    <script>
+      function initMultiple() {
+        initMap();
+        initAutocomplete();
+      }
       // This example displays an address form, using the autocomplete feature
       // of the Google Places API to help users fill in the information.
 
@@ -192,7 +192,7 @@
       }
       */
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYQHKMzQBNqWcLUvLKJNrSdXqZ90wOA88&libraries=places&callback=initAutocomplete"
-        async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYQHKMzQBNqWcLUvLKJNrSdXqZ90wOA88&libraries=places&callback=initMultiple"
+    async defer></script>
   </body>
 </html>

@@ -1,8 +1,4 @@
 $(document).ready(function () {
-
-
-
-    
     $(".searchMap").on("click", function () {
         console.log("click");
         let streetAddress = $(".streetAddress");
@@ -11,25 +7,53 @@ $(document).ready(function () {
         let zipAddress = $(".zipAddress");
         let countryAddress = $(".countryAddress");
 
-
-
-        var addressesArray = [
-            '301 Brazos St, 78701',
+        var locations = [
+            '301 Brazos St, Austin, TX 78701',
+            '301 Congress Ave, Austin, TX 78701'
             //follow this structure
         ];
-        //loop all the addresses and call a marker for each one
-        for (var x = 0; x < addressesArray.length; x++) {
-            $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=' + addressesArray[x] + '&sensor=false', null, function (data) {
-                var p = data.results[0].geometry.location;
-                var latlng = new google.maps.LatLng(p.lat, p.lng);
-                var aMarker = new google.maps.Marker({
-                    position: latlng, //it will place marker based on the addresses, which they will be translated as geolocations. 
-                    map: map
 
+
+        //create empty LatLngBounds object
+        var bounds = new google.maps.LatLngBounds();
+        var infowindow = new google.maps.InfoWindow();
+
+
+        locations.forEach(address => {
+
+            let parsedAddress = urlAddress(address);
+            let llUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=" + parsedAddress + "&key=AIzaSyCYQHKMzQBNqWcLUvLKJNrSdXqZ90wOA88";
+            $.getJSON(llUrl).then(function (data) {
+                let longLat = {
+                    longitude: data.results[0].geometry.location.lng,
+                    latitude: data.results[0].geometry.location.lat
+                };
+
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(longLat.latitude, longLat.longitude),
+                    map: map
                 });
 
-            });
-        }
-    });
-});
+                //extend the bounds to include each marker's position
+                bounds.extend(marker.position);
 
+                google.maps.event.addListener(marker, 'click', (function (marker, address) {
+                    return function () {
+                        infowindow.setContent(address);
+                        infowindow.open(map, marker);
+                    }
+                })(marker, address));
+
+
+                //now fit the map to the newly inclusive bounds
+                map.fitBounds(bounds);
+
+            });
+
+        });
+    });
+
+    function urlAddress(address) {
+        return address.replace(/\s+/g, '+');
+    }
+});
