@@ -4,7 +4,7 @@
 }
 /* header */
 .header{
-  max-width:960px;
+  max-width:620px;
   padding-top:20px;
   margin:0 auto;
   border:0;
@@ -18,8 +18,11 @@
   height: 25px;
 }
 
+.logoBox{
+  align-content: middle;
+}
+
 .logoHead{
-  height: 25%;
   padding-bottom: 20px;
   max-width: 115px;
   max-height: 108px;
@@ -27,13 +30,92 @@
 }
 
 .logoName{
-height: 10%;
 max-width: 477px;
 max-height: 47px;
 padding-left: 5px;
+padding-top: 15px;
 }
 
+@media only screen and (max-width: 768px) {
+  .header{
+  max-width:620px;
+  padding-top:20px;
+  margin:0 auto;
+  border:0;
+  align-content: center;
 
+}
+
+.logoHead{
+  padding-bottom: 20px;
+  max-width: 115px;
+  max-height: 108px;
+  padding-right:0px;
+}
+
+.logoName{
+max-width: 477px;
+max-height: 47px;
+padding-left: 5px;
+}}
+
+@media only screen and (max-width: 568px) {
+  .header{
+  max-width:420px;
+  padding-top:20px;
+  margin:0 auto;
+  border:0;
+  align-content: center;
+
+}
+
+.logoMargin{
+  padding-left: 0px;
+}
+
+.logoHead{
+  padding-bottom: 20px;
+  max-width: 100px;
+  max-height: 106px;
+  padding-right:10px;
+}
+
+.logoName{
+max-width: 440px;
+max-height: 44px;
+padding-left: 5px;
+}
+
+}
+
+@media only screen and (max-width: 500px) {
+  .header{
+  max-width:420px;
+  padding-top:20px;
+  margin:0 auto;
+  border:0;
+  align-content: center;
+
+}
+
+.logoMargin{
+  padding-left: 0px;
+}
+
+.logoHead{
+  padding-bottom: 20px;
+  max-width: 85px;
+  max-height: 90px;
+  padding-right:10px;
+}
+
+.logoName{
+max-width: 360px;
+max-height: 35px;
+padding-left: 5px;
+}
+
+}
 /*  registrattion */
 
 .registration{
@@ -64,6 +146,7 @@ body {
   /*background-color: #4aaaa5; */
   margin: 0 auto;
   padding: 0;
+}
 /*  background-image: url("../images/Couch-PollTato.png");
   background-size: 15%;
   background-repeat: no-repeat;
@@ -79,11 +162,13 @@ body {
 
 .site {
   display: flex;
-  /* allows the main content to stretch the viewport height */
+  /* allows the main content to stretch the viewport height 
   min-height: 100vh;
   flex-direction: column;
   font-family: 'Quicksand', sans-serif;
-}
+}*/
+
+
 .Navbart {
   background-color: #F8F8F8;
   border-color: #E7E7E7;
