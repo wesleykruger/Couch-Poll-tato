@@ -10,10 +10,12 @@
   <meta name="viewport" content="width = device-width, initial-scale = 1">
   <title>Couch Poll-Tato Registration</title>
   <link rel="stylesheet" href="assets/css/reset.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
   <!-- link to my own custom stylesheet style.css  -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/regist.css">
 
   <style>
     .jumbotron{
@@ -34,9 +36,7 @@
 
 
 
-.titleWeb {
-  font-family: "font-image";
-}
+
 
 
 
@@ -48,8 +48,8 @@
   <!-- Header Section -->
   <header>
     <div class="header container">
-        <div class="row">
-          <div class="col-1 logoMargin"></div>
+      <div class="row">
+        <div class="col-1 logoMargin"></div>
         <div class="col-2 logoMargin">
           <img class="logoHead" src="assets/images/Couch-PollTato.png">
         </div>
@@ -68,7 +68,7 @@
   <br>
 
   <section class="container registration">
-    <div class="col-md-8 col-md-offset-1 form">
+    <div class="col-md-offset-1 form">
       <form class="form-horizontal" role="form">
         <fieldset>
           <br>
@@ -77,71 +77,66 @@
 
           <!-- Text input-->
           <div class="form-group">
-            <div class="col-sm-4 right-padding">
-              <label class="no-margin">First Name</label>
-              <input type="text" name="fistName" placeholder="First Name" class="form-control">
+            <div class="row">
+              <div class="col-sm-5 right-padding">
+                <label class="labelReg">First Name</label>
+                <input type="text" name="fistName" placeholder="First Name" class="inputReg">
+              </div>
+              <div class="col-sm-2 no-padding">
+                <label class="labelReg">Middle Name</label>
+                <input type="text" name="middleName" placeholder="Middle Name" class="inputReg">
+              </div>
+              <div class="col-sm-5 left-padding">
+                <label class="labelReg">Last Name</label>
+                <input type="text" name="lastName" placeholder="Last Name" class="inputReg">
+              </div>
             </div>
-            <div class="col-sm-2 no-padding">
-              <label class="no-margin">Middle Name</label>
-              <input type="text" name="middleName" placeholder="Middle Name" class="form-control">
-            </div>
-            <div class="col-sm-4 no-padding">
-              <label class="no-margin">Last Name</label>
-              <input type="text" name="lastName" placeholder="Last Name" class="form-control">
+            <div class="row">
+            <div class="col-sm-6">
+                <input type="date" placeholder="Date Of Birth" class="inputReg">
+            </div> 
+            <div class="col-sm-6">Date of Birth</div>
             </div>
           </div>
 
           <!-- Text input-->
-          <div class="form-group">
-            <div class="col-sm-4">
-              <input type="date" placeholder="Date Of Birth" class="form-control">
-            </div>
-          </div>
-
-          <!-- Text input-->
-          <div class="form-group">
-            <div class="col-sm-4">
-              <select type="gender" placeholder="Gender" class="form-control">
-                <option value="female">Female</option>
-                <option value="male">Male</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="col-sm-4">
-
-            </div>
-          </div>
 
           <!-- Address Section -->
           <!-- Form Name -->
           <legend>Address Details</legend>
           <!-- Text input-->
           <div class="form-group">
-            <div class="col-sm-10">
-              <input type="text" name="addressLine1" placeholder="Address Line 1" class="form-control">
+            <div class="row">
+            <div class="col-sm-8 right-padding">
+              <input type="text" name="addressLine1" placeholder="Address Line 1" class="inputReg">
+            </div>
+ 
+          <div class="col-sm-4 left-padding">
+            <input type="text" name="city" placeholder="City" class="inputReg">
+          </div>
+        </div>
+        </div>
+          <!-- Text input-->
+          <div class="form-group">
+            <div class="row">
+            <div class="col-sm-8 right-padding">
+              <input type="text" name="addressLine2" placeholder="Address Line 2" class="inputReg">
+            </div>
+            <div class="col-sm-2 no-padding">
+                <input type="state" name="state" placeholder="State" class="inputReg">
+              </div>
+              <div class="col-sm-2 left-padding">
+                <input type="text" name="postalCode" placeholder="Zip" class="inputReg">
+              </div>
             </div>
           </div>
           <!-- Text input-->
-          <div class="form-group">
-            <div class="col-sm-10">
-              <input type="text" name="addressLine2" placeholder="Address Line 2" class="form-control">
-            </div>
-          </div>
-          <!-- Text input-->
-          <div class="form-group">
-            <div class="col-sm-4">
-              <input type="text" name="city" placeholder="City" class="form-control">
-            </div>
-            <div class="col-sm-2">
-              <input type="text" name="state" placeholder="State" class="form-control">
-            </div>
-            <div class="col-sm-4">
-              <input type="text" name="postalCode" placeholder="Post Code" class="form-control">
-            </div>
-          </div>
         </fieldset>
       </form>
     </div>
   </section>
+  <footer class="footer">
+    <div class="titleWeb">a</div>
+  </footer>
+
 </body>

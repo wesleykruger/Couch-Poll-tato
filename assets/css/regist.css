@@ -1,0 +1,30 @@
+.registration{
+    background-color: white;
+    max-width: 620px;
+  }
+  
+  .inputReg{
+      width: 100%;
+      background-color:rgb(164, 182, 193);
+      color:  rgb(235, 234, 217);
+
+  }
+
+  .form {
+    margin:0;
+    padding:0;
+  }
+  
+  .no-padding {
+    padding:0;
+  }
+  
+  .right-padding {
+    padding-right:0;
+  }
+  .left-padding {
+    padding-left:0;
+  }
+  .labelReg{
+    margin:0
+  }
