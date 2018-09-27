@@ -20,22 +20,26 @@
 
 
   .form {
-    margin:0;
-    padding:0;
+    margin:0px;
+    padding:0px;
   }
   
   .no-padding {
-    padding:0;
+    padding:0px;
   }
-  
+
   .right-padding {
-    padding-right:0;
+    padding-right:0px;
   }
   .left-padding {
-    padding-left:0;
+    padding-left:0px;
   }
+  .padding {
+    padding-left: 15px; 
+ }
+
   .labelReg{
-    margin:0
+    margin:0px;
   }
 
   .birth{
@@ -51,9 +55,11 @@
 
   .btn{
       max-width: 100px;
-      max-height: 100px;
-      background-color: white;
-
+      max-height: 100px;    
+    }
+    .btn:hover{
+        transform: scale(1.1);
+        transition: .1s;
     }
         .btnSpace{
             padding-left: 400px;
@@ -61,20 +67,25 @@
 
     @media only screen and (max-width: 580px) {
         .no-padding {
-            padding-right:15;
-            padding-left:15;
+            padding-right:15px;
+            padding-left:15px;
 
           }
           
           .right-padding {
-            padding-right:15;
-            padding-left:15;
+            padding-right:15px;
+            padding-left:15px;
 
           }
           .left-padding {
-            padding-left:15;
-            padding-right:15;
+            padding-left:15px;
+            padding-right:15px;
           }
+
+          .padding {
+            padding-left: 0px; 
+         }
+        
 
           .btnSpace{
             align-content: center;
