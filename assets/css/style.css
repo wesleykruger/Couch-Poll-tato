@@ -131,15 +131,15 @@ body {
 .titleWeb {
   font-family: "font-image";
   text-align: center;
-  color: rgb(235, 234, 217)
-
+  color: rgb(235, 234, 217);
+  font-size:36px;
 }
 
 .footer {
 background-color: rgb(46, 89, 143);
 
 max-width: 100%;
-max-height: 30px;
+max-height: 75px;
 align-content: center;
 
 }
