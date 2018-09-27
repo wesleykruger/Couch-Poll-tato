@@ -1,7 +1,4 @@
-@font-face{
-  font-family:"font-image";
-  src: url("../fonts/laworder.ttf");
-}
+
 /* header */
 .header{
   max-width:620px;
@@ -128,6 +125,11 @@ body {
 }
 
 /* footer */
+@font-face{
+  font-family:"font-image";
+  src: url("../fonts/laworder.ttf");
+}
+
 .titleWeb {
   font-family: "font-image";
   text-align: center;
