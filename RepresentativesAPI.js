@@ -5,7 +5,9 @@ const facebookURL = "https://www.facebook.com/"
 const twitterImage = "assets/images/twitterlogo.png"
 const facebookImage = "assets/images/facebooklogo.png"
 $(document).ready(function () {
+    $(".rep-table").hide()
     $(document).on('click', ".submit", function (event) {
+        $(".rep-table").show()
         $(".representatives").empty()
         $(".official-name").empty()
         $(".official-address").empty()
