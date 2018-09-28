@@ -2,29 +2,89 @@
     background-color: white;
     max-width: 620px;
   }
-  
+
+  legend {
+      color: rgb(46, 89, 143);
+      margin: 0;
+      padding-top: 10px;
+  }
   .inputReg{
       width: 100%;
-      background-color:rgb(164, 182, 193);
-      color:  rgb(235, 234, 217);
-
+      color:rgb(148, 15, 21);
+      background-color:  rgb(235, 234, 217);
   }
 
+::placeholder{
+    color: rgb(148, 15, 21)
+}
+
+
   .form {
-    margin:0;
-    padding:0;
+    margin:0px;
+    padding:0px;
   }
   
   .no-padding {
-    padding:0;
+    padding:0px;
   }
-  
+
   .right-padding {
-    padding-right:0;
+    padding-right:0px;
   }
   .left-padding {
-    padding-left:0;
+    padding-left:0px;
   }
+  .padding {
+    padding-left: 15px; 
+ }
+
   .labelReg{
-    margin:0
+    margin:0px;
   }
+
+  .birth{
+      color: rgb(46, 89, 143);
+  }
+
+  .profileBtn{
+    background-color: white;
+    border: 0;
+    margin: 0;
+    padding:0;
+}
+
+  .btn{
+      max-width: 100px;
+      max-height: 100px;    
+    }
+    .btn:hover{
+        transform: scale(1.1);
+        transition: .1s;
+    }
+
+    @media only screen and (max-width: 580px) {
+        .no-padding {
+            padding-right:15px;
+            padding-left:15px;
+
+          }
+          
+          .right-padding {
+            padding-right:15px;
+            padding-left:15px;
+
+          }
+          .left-padding {
+            padding-left:15px;
+            padding-right:15px;
+          }
+
+          .padding {
+            padding-left: 0px; 
+         }
+        
+
+          .btnSpace{
+            align-content: center;
+            padding-left:0;
+          }}
