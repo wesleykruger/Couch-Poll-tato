@@ -122,13 +122,13 @@ $(document).ready(function () {
   $(".createProfileBtn").on("click", function () {
     console.log("click");
     let newUser = {
-      emailAddress: $(".emailEntry").val(),
-      password: $(".passwordEntry").val(),
-      address1: $(".address1Entry").val(),
-      address2: $(".address2Entry").val(),
-      city: $(".cityEntry").val(),
-      state: $(".stateEntry").val(),
-      zip: $(".zipEntry").val()
+      emailAddress: $(".emailRegister").val(),
+      password: $(".passwordRegister").val(),
+      address1: $(".address1Register").val(),
+      address2: $(".address2Register").val(),
+      city: $(".cityRegister").val(),
+      state: $(".stateRegister").val(),
+      zip: $(".zipRegister").val(),
     };
 
     //database.ref("/users").push(newUser);

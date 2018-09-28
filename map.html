@@ -1,55 +1,100 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-t
-    o-fit=no">
-    <!-- reset.css -->
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- link to google fonts Quicksand  -->
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-    <!-- link to my own custom stylesheet style.css  -->
-    <link rel="stylesheet" href="assets/css/style.css">
-  </head>
 
-  <body>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-t
+      o-fit=no">
+  <!-- reset.css -->
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <!-- link to google fonts Quicksand  -->
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- link to my own custom stylesheet style.css  -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+      #map {
+        height: 50%;
+      }
+  
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+    </style>
+  <!-- JQuery-->
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <!-- Momentjs-->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <!-- local js-->
+  <script src="assets/javascript/mapSearch.js"></script>
+  <!-- Google API and callback-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYQHKMzQBNqWcLUvLKJNrSdXqZ90wOA88&libraries=places&callback=initMultiple"
+    async defer></script>
+</head>
+
+<body>
+  <footer class="footer">
+    <div class="titleWeb"></div>
+  </footer>
+
+
+    <h3>Poll Map</h3>
+
+    <div>
+      <table class="poll-location"></table>
+    </div>
+    <div id="locationField">
+      <input id="autocomplete" placeholder="Enter your address" type="text">
+    </div>
+    <form>
+      <div class="form-group">
+        <label for="search streetAddress">Address</label>
+        <input type="text" class="form-control streetAddress" id="street_number"><input type="text" class="form-control streetAddress"
+          id="route">
+      </div>
+      <div class="form-group">
+        <label for="search cityAddress">City</label>
+        <input type="text" class="form-control cityAddress" id="locality">
+      </div>
+      <div class="form-group">
+        <label for="search stateAddress">State</label>
+        <input type="text" class="form-control stateAddress" id="administrative_area_level_1">
+      </div>
+      <div class="form-group">
+        <label for="search zipAddress">Zip</label>
+        <input type="text" class="form-control zipAddress" id="postal_code">
+      </div>
+      <div class="form-group">
+        <label for="search countryAddress">Zip</label>
+        <input type="text" class="form-control countryAddress" id="country">
+      </div>
+    </form>
+    <button class="searchMap">Search</button>
+
+    <div id="map"></div>
+
+    <div class="locationInfo"></div>
+    <div class="pollingTimeTable"></div>
+
+
+
+
   <footer class="footer">
     <div class="titleWeb">a</div>
   </footer>
 
-<section>
-    <h3>Poll Map</h3>
-    <div class="map">
-    </div>
 
-  <div>
-    <table class="poll-location"></table>
-  </div>
+</body>
 
-    <form>
-        <div class="form-group">
-            <label for="search">Address</label>
-            <input type="text" class="form-control" id="search-term">
-          </div>
-          <div class="form-group">
-            <label for="search">City</label>
-            <input type="text" class="form-control" id="search-term">
-          </div>
-          <div class="form-group">
-            <label for="search">State</label>
-            <input type="text" class="form-control" id="search-term">
-          </div>
-          <div class="form-group">
-            <label for="search">Zip</label>
-            <input type="text" class="form-control" id="search-term">
-            <button>Submit</button>
-          </div>
-    </form>
-</section>
-<footer class="footer">
-    <div class="titleWeb">a</div>
-  </footer>
-  </body>
+</html>
