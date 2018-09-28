@@ -1,5 +1,7 @@
-.ballot {
-    max-width: 460px;
+
+
+.spaceBtn{
+    align-content: center;
     margin: 0, auto;
 }
 
@@ -8,7 +10,6 @@
     border: 0;
     margin: 0;
     padding-left:0;
-    vertical-align: baseline;
 }
 .registerBtn{
     background-color: white;
@@ -25,7 +26,4 @@
       transition: .1s;
   }
 
-  .center{
-      padding-top: 30px;
-      text-align: center;
-  }
+  

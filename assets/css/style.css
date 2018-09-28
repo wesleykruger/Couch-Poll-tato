@@ -1,8 +1,24 @@
+/* Font Styling */
+
+.blue{
+  color: rgb(46, 89, 143);
+}
+
+
+.center{
+  padding-top: 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.contentAlign{
+  align-content: center;
+}
 
 /* header */
 .header{
   max-width:620px;
-  padding-top:20px;
+  padding-top:55px;
   margin:0 auto;
   border:0;
   align-content: center;
@@ -122,6 +138,28 @@ body {
   /*background-color: #4aaaa5; */
   margin: 0 auto;
   padding: 0;
+}
+
+.background{
+  margin:0 auto;
+  max-width: 930px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/uncle-sam.png);
+  background-position: center;
+  align-content: top;
+  min-height: 100%;
+}
+
+/* Input Designs */
+.inputReg{
+  width: 100%;
+  color:rgb(148, 15, 21);
+  background-color:  rgb(235, 234, 217);
+}
+
+::placeholder{
+color: rgb(148, 15, 21)
 }
 
 /* footer */

@@ -1,24 +1,26 @@
-
-
 <html lang="en">
-  <head>
+
+<head>
   <meta charset="UTF-8">
-   
+
   <!-- If IE use the latest rendering engine -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Set the page to the width of the device and set the zoon level -->
   <meta name="viewport" content="width = device-width, initial-scale = 1">
   <title>Candidates-Info</title>
-  <!-- CSS Reset -->
+  <!-- reset.css -->
   <link rel="stylesheet" href="assets/css/reset.css">
-
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <!-- link to google fonts Quicksand  -->
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
   <!-- link to my own custom stylesheet style.css  -->
   <link rel="stylesheet" href="assets/css/style.css">
-  
+
+
   <style>
-  .jumbotron{
+    .jumbotron{
       background-color:#2E2D88;
       color:white;
   }
@@ -33,11 +35,14 @@
       margin-bottom: 0;
   }
   </style>
-   
-  </head>
-  <body>
-  <!-- Header Section -->
-  <header>
+
+</head>
+
+<body>
+  <!-- Background Image -->
+  <div class="background">
+    <!-- Header Section -->
+    <header>
       <div class="header container">
         <div class="row">
           <div class="col-1 logoMargin"></div>
@@ -55,65 +60,69 @@
       <!-- Header Botom Border -->
       <div class="header-border"></div>
     </header>
-  
-          <!-- Row for  -->
-          <div class="row">
-            <div class="col-sm-12">
-             
-              <!--  -->
-              <div class="card">
-                <div class="card-header">
-                  <strong>
-                    <h2>Candidate Information</h2>
-                </div>
-                <div class="card-body">
-        
-                  <!-- -->
-                  <form role="form">
-        
-                    <!-- -->
-                    <div class="mx-auto" style="width: 200px;">
-                    <div class="form-group row-md-3">
-                      <label for="search">Name:</label>
-                      <input type="text" class="form-control" id="search-term">
-                    </div>
-                    <div class="form-group row-md-3">
-                      <label for="search">Address:</label>
-                      <input type="text" class="form-control" id="search-term">
-                    </div>
-        
-                    <div class="form-group row-md-3">
-                        <label for="search">Email:</label>
-                        <input type="text" class="form-control" id="search-term">
-                      </div>
-        
-                      <div class="form-group row-md-6">
-                      <label for="inputZip">City</label>
-                      <input type="text" class="form-control" id="inputZip">
-                    </div>
-                    <div class="form-group row-md-6">
-                        <label for="inputZip">Zip</label>
-                        <input type="text" class="form-control" id="inputZip">
-                      </div>
-        
-                    <!--  -->
-                    <a type="submit" href="Home.html"button type="submit" class = "btn btn-danger" role = "button"></button>
-                      <i class="fa fa-search"></i> Submit</a>
-                      <!--  -->
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        
-          <!--  -->
-          <div class="row">
-            <div class="col-sm-12">
 
-        
-              <!--  -->
-<br>
-  <footer class="footer">
-    <div class="titleWeb">a</div>
-  </footer>
-        </body>
+    <!-- Row for  -->
+    <section class="current">
+    <div class="row">
+      <div class="col-sm-12">
+
+        <!--  -->
+        <div class="card">
+          <div class="card-header">
+            <strong>
+              <h2>Candidate Information</h2>
+          </div>
+          <div class="card-body">
+
+            <!-- -->
+            <form role="form">
+
+              <!-- -->
+              <div class="mx-auto" style="width: 200px;">
+                <div class="form-group row-md-3">
+                  <label for="search">Name:</label>
+                  <input type="text" class="form-control" id="search-term">
+                </div>
+                <div class="form-group row-md-3">
+                  <label for="search">Address:</label>
+                  <input type="text" class="form-control" id="search-term">
+                </div>
+
+                <div class="form-group row-md-3">
+                  <label for="search">Email:</label>
+                  <input type="text" class="form-control" id="search-term">
+                </div>
+
+                <div class="form-group row-md-6">
+                  <label for="inputZip">City</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div>
+                <div class="form-group row-md-6">
+                  <label for="inputZip">Zip</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div>
+
+                <!--  -->
+                <a type="submit" href="Home.html" button type="submit" class="btn btn-danger" role="button"></button>
+                  <i class="fa fa-search"></i> Submit</a>
+                <!--  -->
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!--  -->
+
+
+
+    <!--  -->
+    <br>
+    <!-- Footer-->
+    <footer class="footer">
+      <div class="titleWeb">a</div>
+    </footer>
+  </div>
+</body>

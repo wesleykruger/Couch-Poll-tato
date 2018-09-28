@@ -1,0 +1,11 @@
+.ballot {
+    max-width: 400px;
+    border: 0;
+}
+
+.checkbox{
+    padding: 20px;
+}
+.checkbox:hover{
+    content: url(../images/checkedBallot.png)
+}

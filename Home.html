@@ -15,87 +15,110 @@
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
   <!-- link to my own custom stylesheet style.css  -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/home.css">
+
+
+  <style>
+    .jumbotron{
+        background-color:#2E2D88;
+        color:white;
+    }
+    /* Adds borders for tabs */
+    .tab-content {
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+    }
+    .nav-tabs {
+        margin-bottom: 0;
+    }
+    </style>
 
 
 </head>
 
 <body>
+  <!-- Backgroundn Image -->
+  <div class="background">
+    <!-- Header -->
+    <header>
+      <div class="header container">
+        <div class="row">
+          <div class="col-1 logoMargin"></div>
+          <div class="col-2 logoMargin">
+            <img class="logoHead" src="assets/images/Couch-PollTato.png">
+          </div>
+          <div class="col-8">
+            <img class="logoName" src="assets/images/Couch-PollTato-Name.png">
+          </div>
+          <div class="col-1"></div>
 
-  <!-- Header Section -->
-  <header>
-    <div class="header container">
-      <div class="row">
-        <div class="col-1 logoMargin"></div>
-        <!-- Logo -->
-        <div class="col-2 logoMargin">
-          <img class="logoHead" src="assets/images/Couch-PollTato.png">
-        </div>
-        <!-- Header -->
-        <div class="col-8">
-          <img class="logoName" src="assets/images/Couch-PollTato-Name.png">
-        </div>
-        <div class="col-1"></div>
-      </div>
-    </div>
-    <!-- Header Botom Border -->
-    <div class="header-border"></div>
-  </header>
-
-  <br>
-
-  <!-- Menu -->
-  <section class="ballot">
-    <div class=" bg-light">
-      <!-- Upcoming Election -->
-      <div aria-label="breadcrumb">
-        <div class="form-group row">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Upcoming elections</a></li>
-          </ol>
         </div>
       </div>
-      <!-- Current Adminstration-->
-      <nav aria-label="breadcrumb">
-        <div class="form-group row">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Current Administration</a></li>
-          </ol>
+      <div class="header-border"></div>
+    </header>
+    <br>
+    <!-- Menu -->
+    <section class="ballot">
+      <div class="container bg-light">
+        <!-- Title -->
+        <h3 class="blue center">Menu</h3>
+
+        <!-- Elections 790 -->
+        <nav aria-label="breadcrumb">
+          <div class="form-group ">
+            <ol class="">
+              <li class="contentAlign">
+                <a class="" href="#">
+                  <img class="checkbox" src="assets/images/checkedBallot.png">
+                  Upcoming Elections
+                </a>
+              </li>
+            </ol>
+        </nav>
+        <div class="row">
+          <div class="col-12">
+          </div>
         </div>
-      </nav>
-      <!-- Maps -->
-      <nav aria-label="breadcrumb">
-        <div class="form-group row">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Map for Voting Loction
-                <!-- not sure what this is for -->
-                <link rel="stylesheet" href="">
+        <!-- Current -->
+        <nav aria-label="breadcrumb"></nav>
+        <div class="form-group ">
+          <ol class="">
+            <li class="breadcrumb-item"><a href="#">
+                <img class="checkbox" src="assets/images/checkedBallot.png">
+                Current Administration
               </a></li>
           </ol>
         </div>
-      </nav>
+        </nav>
+        <!-- Map -->
+        <nav aria-label="breadcrumb">
+          <div class="form-group">
+            <ol class="">
+              <li class="breadcrumb-item"><a href="#">
+                  <img class="checkbox" src="assets/images/checkedBallot.png">
+                  Map for Voting loction
+                  <link rel="stylesheet" href=""></a></li>
+            </ol>
+        </nav>
 
-      <nav aria-label="breadcrumb">
-        <div class="form-group col-md-3">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Pofile
-                <link rel="stylesheet" href=""></a></li>
-          </ol>
-        </div>
-      </nav>
-      <div class="row">
-        <div class="col-12">
-        </div>
+        <nav aria-label="breadcrumb">
+          <div class="form-group col-md-3">
+            <ol class="breadcrumb">
+              <li class=><a href="#">Pofile
+                  <link rel="stylesheet" href=""></a></li>
+            </ol>
+        </nav>
+
+
+        <button type="submit">Logout</button>
       </div>
+    </section>
+    <br>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="titleWeb">a</div>
+    </footer>
 
-      <button type="submit">Logout</button>
-    </div>
-  </section>
-
-  <br>
-
-
-  <footer class="footer">
-    <div class="titleWeb">a</div>
-  </footer>
+  </div>
 </body>

@@ -8,15 +8,7 @@
       margin: 0;
       padding-top: 10px;
   }
-  .inputReg{
-      width: 100%;
-      color:rgb(148, 15, 21);
-      background-color:  rgb(235, 234, 217);
-  }
 
-::placeholder{
-    color: rgb(148, 15, 21)
-}
 
 
   .form {
@@ -62,7 +54,7 @@
         transition: .1s;
     }
 
-    @media only screen and (max-width: 580px) {
+    @media only screen and (max-width: 575px) {
         .no-padding {
             padding-right:15px;
             padding-left:15px;
