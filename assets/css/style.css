@@ -1,3 +1,8 @@
+html,body{
+  height: 100%;
+  margin:0;
+}
+
 /* Font Styling */
 
 .blue{
@@ -5,11 +10,6 @@
 }
 
 
-.center{
-  padding-top: 20px;
-  text-align: center;
-  font-size: 30px;
-}
 
 .contentAlign{
   align-content: center;
@@ -134,21 +134,19 @@ padding-left: 5px;
 
 body {
   background-color: rgb(235, 234, 217);
-
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/uncle-sam.png);
+  background-position: top;
+  align-content: center;
+  min-height: 100%;
   /*background-color: #4aaaa5; */
   margin: 0 auto;
   padding: 0;
 }
 
 .background{
-  margin:0 auto;
-  max-width: 930px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url(../images/uncle-sam.png);
-  background-position: center;
-  align-content: top;
-  min-height: 100%;
+
 }
 
 /* Input Designs */
@@ -178,10 +176,20 @@ color: rgb(148, 15, 21)
 .footer {
 background-color: rgb(46, 89, 143);
 
-max-width: 100%;
+min-width: 100%;
 max-height: 75px;
 align-content: center;
 
+}
+
+.wrapper{
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+
+.footer,
+.push {
+  height: 50px;
 }
 
 /*  background-image: url("../images/Couch-PollTato.png");
