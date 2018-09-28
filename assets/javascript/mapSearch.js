@@ -44,6 +44,7 @@
         var place = autocomplete.getPlace();
 
         for (var component in componentForm) {
+            console.log(component);
             document.getElementById(component).value = '';
             document.getElementById(component).disabled = false;
         }
@@ -63,6 +64,7 @@
 
 $(document).ready(function() {
     $(".searchMap").on("click", function () {
+        console.log("click");
         let streetAddress = $(".streetAddress");
         let cityAddress = $(".cityAddress");
         let stateAddress = $(".stateAddress");
@@ -100,6 +102,7 @@ $(document).ready(function() {
               </div>`);
 
 
+              //populate voting dates table
                 for (let i = 0; i < response.earlyVoteSites.length; i++) {
                     locations.push(response.earlyVoteSites[i].address.line1 + ", " + response.earlyVoteSites[i].address.line2 + ", " + response.earlyVoteSites[i].address.city + ", " + response.earlyVoteSites[i].address.state + ", " + response.earlyVoteSites[i].address.zip);
                     let splitPollingHours = response.earlyVoteSites[i].pollingHours.split(/\n/g) || [];
@@ -123,12 +126,12 @@ $(document).ready(function() {
                      <td class="vote-site-name">${response.earlyVoteSites[i].address.locationName}<br>${response.earlyVoteSites[i].address.line1}, ${response.earlyVoteSites[i].address.city}, ${response.earlyVoteSites[i].address.state} ${response.earlyVoteSites[i].address.zip}
                      <br>Polling Location Notes: ${response.earlyVoteSites[i].notes}
                      <br>Date from ${startDate} to ${endDate}
-                     <br>Is this polling location officially verified for election? : <b>${response.earlyVoteSites[i].sources[0].official}</b></td>`
+                     </td>`
                     );
-                }
+                }//end populate
 
+                //put markers on map
                 locations.forEach(address => {
-
                     let parsedAddress = urlAddress(address);
                     let llUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=" + parsedAddress + "&key=AIzaSyCYQHKMzQBNqWcLUvLKJNrSdXqZ90wOA88";
                     $.getJSON(llUrl).then(function (data) {

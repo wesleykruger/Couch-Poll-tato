@@ -8,10 +8,14 @@
 
   <!-- Set the page to the width of the device and set the zoon level -->
   <meta name="viewport" content="width = device-width, initial-scale = 1">
+<<<<<<< HEAD
   <title>Register for Couch Poll-Tato</title>
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+=======
+  <title>Couch Poll-Tato Registration</title>
+>>>>>>> df06fa1808278baf334a1846f628cbbfc3dd32e7
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
   <!-- reset.css -->
   <link rel="stylesheet" href="assets/css/reset.css">
@@ -21,8 +25,11 @@
   <!-- link to my own custom stylesheet style.css  -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/regist.css">
-
-
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+  <script src="assets/javascript/db.js"></script>
 
 </head>
 
@@ -50,6 +57,7 @@
 
     <br>
 
+<<<<<<< HEAD
     <!-- Registration Form -->
     <section class="container registration">
       <div class="col-md-offset-1 form">
@@ -72,8 +80,35 @@
                 <div class="col-sm-5 left-padding">
                   <input type="text" name="lastName" placeholder="Last Name" class="inputReg">
                 </div>
+=======
+  <!-- Registration Form -->
+  <section class="container registration">
+    <div class="col-md-offset-1 form">
+      <form class="form-horizontal" role="form">
+        <fieldset>
+          <!-- Form Name -->
+          <legend>Personal Information Details</legend>
+          <div class="row">
+            <div class="col-12 bannerArea"></div>
+          </div>
+          <div class="form-group">
+            <!-- Name Line -->
+            <div class="row">
+              <!-- First Name -->
+              <div class="col-sm-5 right-padding">
+                <input type="text" name="fistName" placeholder="First Name" class="inputReg firstNameRegister">
+              </div>
+              <!-- Middle Name -->
+              <div class="col-sm-2 no-padding">
+                <input type="text" name="middleName" placeholder="Middle Name" class="inputReg middleNameRegister">
+              </div>
+              <!-- Last Name -->
+              <div class="col-sm-5 left-padding">
+                <input type="text" name="lastName" placeholder="Last Name" class="inputReg lastNameRegister">
+>>>>>>> df06fa1808278baf334a1846f628cbbfc3dd32e7
               </div>
 
+<<<<<<< HEAD
               <!-- Line 1 -->
               <div class="row">
                 <!-- Address 1 -->
@@ -84,8 +119,20 @@
                 <div class="col-sm-4 left-padding">
                   <input type="text" name="city" placeholder="City" class="inputReg">
                 </div>
+=======
+            <!-- Line 1 -->
+            <div class="row">
+              <!-- Address 1 -->
+              <div class="col-sm-8 right-padding">
+                <input type="text" name="addressLine1" placeholder="Address Line 1" class="inputReg address1Register">
+              </div>
+              <!-- City -->
+              <div class="col-sm-4 left-padding">
+                <input type="text" name="city" placeholder="City" class="inputReg cityRegister">
+>>>>>>> df06fa1808278baf334a1846f628cbbfc3dd32e7
               </div>
 
+<<<<<<< HEAD
               <!-- Line 2 -->
               <div class="row">
                 <!-- Address 2 -->
@@ -100,8 +147,24 @@
                 <div class="col-sm-2 left-padding">
                   <input type="text" name="postalCode" placeholder="Zip" class="inputReg">
                 </div>
+=======
+            <!-- Line 2 -->
+            <div class="row">
+              <!-- Address 2 -->
+              <div class="col-sm-8 right-padding">
+                <input type="text" name="addressLine2" placeholder="Address Line 2" class="inputReg address2Register">
+              </div>
+              <!-- State -->
+              <div class="col-sm-2 no-padding">
+                <input type="state" name="state" placeholder="State" class="inputReg stateRegister">
+              </div>
+              <!-- Zip -->
+              <div class="col-sm-2 left-padding">
+                <input type="text" name="postalCode" placeholder="Zip" class="inputReg zipRegister">
+>>>>>>> df06fa1808278baf334a1846f628cbbfc3dd32e7
               </div>
 
+<<<<<<< HEAD
               <!-- Line 3 -->
               <div class="row">
                 <!-- Email -->
@@ -114,8 +177,20 @@
                 </div>
                 <div class="col-sm-3 left-padding birth">(Date of Birth)</div>
                 <div class="col-sm-2 birth age"></div>
+=======
+            <!-- Line 3 -->
+            <div class="row">
+              <!-- Email -->
+              <div class="col-sm-4 right-padding">
+                <input type="text" placeholder="Email" class="inputReg emailRegister">
+              </div>
+              <!-- Date of Birth -->
+              <div class="col-sm-3 no-padding">
+                <input type="date" placeholder="Date Of Birth" class="inputReg DOBRegister">
+>>>>>>> df06fa1808278baf334a1846f628cbbfc3dd32e7
               </div>
 
+<<<<<<< HEAD
               <!-- Line 4 -->
               <div class="row padding">
                 <div class="col-sm-7">
@@ -137,14 +212,50 @@
                   <button class="createProfileBtn profileBtn"><img class="btn" src="assets/images/createProfileBtn.png"></button>
                 </div>
                 <div class="col-sm-1"></div>
+=======
+            <!-- Line 4 -->
+            <div class="row padding">
+              <div class="col-sm-7">
+                <!-- Password -->
+                <div class="row right-padding">
+                  <input type="password" name="password" placeholder="(Password)" class="inputReg passwordRegister">
+                </div>
+                <!-- Password Confirm-->
+                <div class="row right-padding">
+                  <input type="password" name="passwordConfirm" placeholder="(Password Confirm)" class="inputReg passwordRegisterConfirm">
+                </div>
+                <!-- Error Insert -->
+                <div class="row right-padding error">
+                </div>
+              </div>
+              <!-- Submit Button-->
+              <div class="col-sm-1"></div>
+              <div class="col-sm-3 left-padding">
+                <button type = "button" class="profileBtn createProfileBtn"><img class="btn" src="assets/images/createProfileBtn.png"></button>
+>>>>>>> df06fa1808278baf334a1846f628cbbfc3dd32e7
               </div>
             </div>
+<<<<<<< HEAD
           </fieldset>
         </form>
       </div>
     </section>
 
     <br>
+=======
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </section>
+
+  <br>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="titleWeb">a</div>
+  </footer>
+>>>>>>> df06fa1808278baf334a1846f628cbbfc3dd32e7
 
     <!-- Footer -->
     <footer class="footer">
