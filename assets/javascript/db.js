@@ -46,9 +46,6 @@ $(document).ready(function () {
     let email = $(".loginEmail").val();
     console.log(email);
     let pass = $(".loginPassword").val();
-    if (checkExistingEmail === true) {
-      console.log("existing email check");
-    }
     const auth = firebase.auth();
     // Sign in
     auth.setPersistence(firebase.auth.Auth.Persistence.NONE)
@@ -62,10 +59,14 @@ $(document).ready(function () {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
+        $(".bannerArea").html(`<div class="alert-danger text-center">${errorMessage}</div>`);
       });
     // Set localStorage
     localStorage.setItem("username", email);
+    window.location.href="Home.html";
   })
+
+
 
   // Create new user profiles
   $(".createProfileBtn").on("click", function () {

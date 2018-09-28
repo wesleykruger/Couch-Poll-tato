@@ -1,70 +1,102 @@
-    //This is the section to trigger the function to initiate our Google APIs
-    var map;
-    function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: { lat: -34.397, lng: 150.644 },
-            zoom: 8
-        });
-    }
-    function initMultiple() {
-        initMap();
-        initAutocomplete();
-    }
-    // This example displays an address form, using the autocomplete feature
-    // of the Google Places API to help users fill in the information.
+// Kick user back to login if somehow they get here without logging in
+if (localStorage.getItem("username") === null) {
+    window.location.href = "Auth.html";
+}
 
-    // This example requires the Places library. Include the libraries=places
-    // parameter when you first load the API. For example:
-    //<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYQHKMzQBNqWcLUvLKJNrSdXqZ90wOA88&libraries=places">
+//This is the section to trigger the function to initiate our Google APIs
+var map;
+function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: -34.397, lng: 150.644 },
+        zoom: 8
+    });
+}
+function initMultiple() {
+    initMap();
+    initAutocomplete();
+}
+// This example displays an address form, using the autocomplete feature
+// of the Google Places API to help users fill in the information.
 
-    var placeSearch, autocomplete;
-    var componentForm = {
-        street_number: 'short_name',
-        route: 'long_name',
-        locality: 'long_name',
-        administrative_area_level_1: 'short_name',
-        country: 'long_name',
-        postal_code: 'short_name'
-    };
+var placeSearch, autocomplete;
+var componentForm = {
+    street_number: 'short_name',
+    route: 'long_name',
+    locality: 'long_name',
+    administrative_area_level_1: 'short_name',
+    country: 'long_name',
+    postal_code: 'short_name'
+};
 
-    function initAutocomplete() {
-        // Create the autocomplete object, restricting the search to geographical
-        // location types.
-        autocomplete = new google.maps.places.Autocomplete(
+function initAutocomplete() {
+    // Create the autocomplete object, restricting the search to geographical
+    // location types.
+    autocomplete = new google.maps.places.Autocomplete(
             /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
-            { types: ['geocode'] });
+        { types: ['geocode'] });
 
-        // When the user selects an address from the dropdown, populate the address
-        // fields in the form.
-        autocomplete.addListener('place_changed', fillInAddress);
+    // When the user selects an address from the dropdown, populate the address
+    // fields in the form.
+    autocomplete.addListener('place_changed', fillInAddress);
+}
+
+function fillInAddress() {
+    // Get the place details from the autocomplete object.
+    var place = autocomplete.getPlace();
+
+    for (var component in componentForm) {
+        document.getElementById(component).value = '';
+        document.getElementById(component).disabled = false;
     }
 
-    function fillInAddress() {
-        // Get the place details from the autocomplete object.
-        var place = autocomplete.getPlace();
-
-        for (var component in componentForm) {
-            console.log(component);
-            document.getElementById(component).value = '';
-            document.getElementById(component).disabled = false;
-        }
-
-        // Get each component of the address from the place details
-        // and fill the corresponding field on the form.
-        for (var i = 0; i < place.address_components.length; i++) {
-            var addressType = place.address_components[i].types[0];
-            if (componentForm[addressType]) {
-                var val = place.address_components[i][componentForm[addressType]];
-                document.getElementById(addressType).value = val;
-            }
+    // Get each component of the address from the place details
+    // and fill the corresponding field on the form.
+    for (var i = 0; i < place.address_components.length; i++) {
+        var addressType = place.address_components[i].types[0];
+        if (componentForm[addressType]) {
+            var val = place.address_components[i][componentForm[addressType]];
+            document.getElementById(addressType).value = val;
         }
     }
+}
 
 
 
-$(document).ready(function() {
+$(document).ready(function () {
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAU6KkP1GaxMgEbGMcoizsiusMF_qHytD4",
+        authDomain: "election-info-project.firebaseapp.com",
+        databaseURL: "https://election-info-project.firebaseio.com",
+        projectId: "election-info-project",
+        storageBucket: "election-info-project.appspot.com",
+        messagingSenderId: "978592611481"
+    };
+    firebase.initializeApp(config);
+
+    const database = firebase.database();
+    const emailKey = encodeKey(localStorage.getItem("username"));
+
+
+    // Set address to profile's address by default, simulate search
+    database.ref(`/users/${emailKey}/`).once('value').then(function (snap) {
+        let profileObj = snap.val();
+        let profileAdd1 = profileObj.address1;
+        //let profileAdd2 = profileObj.address2;
+        let profileCity = profileObj.city;
+        let profileState = profileObj.state;
+        let profileZip = profileObj.zip;
+        let profileAddress = profileAdd1 + ", " + profileCity + "," + profileState + profileZip;
+
+        $(".streetAddress").val(profileAdd1);
+        $(".cityAddress").val(profileCity);
+        $(".stateAddress").val(profileState);
+        $(".zipAddress").val(profileZip);
+    });
+
+
+
     $(".searchMap").on("click", function () {
-        console.log("click");
         let streetAddress = $(".streetAddress");
         let cityAddress = $(".cityAddress");
         let stateAddress = $(".stateAddress");
@@ -102,7 +134,7 @@ $(document).ready(function() {
               </div>`);
 
 
-              //populate voting dates table
+                //populate voting dates table
                 for (let i = 0; i < response.earlyVoteSites.length; i++) {
                     locations.push(response.earlyVoteSites[i].address.line1 + ", " + response.earlyVoteSites[i].address.line2 + ", " + response.earlyVoteSites[i].address.city + ", " + response.earlyVoteSites[i].address.state + ", " + response.earlyVoteSites[i].address.zip);
                     let splitPollingHours = response.earlyVoteSites[i].pollingHours.split(/\n/g) || [];
@@ -193,4 +225,6 @@ $(document).ready(function() {
         };
         return dayDict[day];
     }
+
+    function encodeKey(s) { return encodeURIComponent(s).replace('.', '%2E'); }
 });
