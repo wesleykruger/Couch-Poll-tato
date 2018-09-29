@@ -63,15 +63,13 @@ $(document).ready(function () {
           // Handle Errors here.
           errorMessage = error.message;
           console.log("error message: " + errorMessage);
-          $(".error").html(`<div class="alert-danger text-center">${errorMessage}</div>`);
+          $(".bannerArea").html(`<div class="alert-danger text-center">${errorMessage}</div>`);
           return errorMessage;
-       
-        if (errorMessage === "") {
-          console.log(errorMessage)
-          $(".bannerArea").html(`<div class="alert-success text-center">Registration successful! Please log in on the front page.</div>`);
-        } }) //else {
-          //$(".bannerArea").html(`<div class="alert-danger text-center">${errorMessage}</div>`);
-        //}
+        });
+      if (errorMessage === "") {
+        console.log(errorMessage)
+        $(".bannerArea").html(`<div class="alert-success text-center">Registration successful! Please log in on the front page.</div>`);
+      }
       database.ref("/users/" + emailKey).set({
         firstName: newUser.firstName,
         middleName: newUser.middleName,
