@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-t
+      o-fit=no">
+  <!-- reset.css -->
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+
+  <!-- link to google fonts Quicksand  -->
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- link to my own custom stylesheet style.css  -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+      #map {
+        height: 50%;
+        max-width:960px;;
+      }
+  
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+    </style>
+  <!-- Momentjs-->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <!-- Google API and callback-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYQHKMzQBNqWcLUvLKJNrSdXqZ90wOA88&libraries=places&callback=initMultiple"
+    async defer></script>
+  <!-- JQuery-->
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <!-- local js-->
+  <script src="assets/javascript/mapSearch.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="header container">
+        <a href="Home.html">
+          <div class="row">
+            <div class="col-1 logoMargin"></div>
+            <!-- Logo -->
+            <div class="col-2 logoMargin">
+              <img class="logoHead" src="assets/images/Couch-PollTato.png">
+            </div>
+            <!-- Header -->
+            <div class="col-8">
+              <img class="logoName" src="assets/images/Couch-PollTato-Name.png">
+            </div>
+            <div class="col-1"></div>
+          </div>
+        </a>
+      </div>
+      <!-- Header Botom Border -->
+    </header>
+    <div class="header-border"></div>
+    <br>
+    <section class="container map">
+      <div class="row padding blue">
+        <h3>Poll Map</h3>
+      </div>
+      <div class="noData"></div>
+
+      <div class="row">
+        <div class="padding" id="locationField">
+          <input id="autocomplete" class="col-12" placeholder="Enter your address" type="text">
+        </div>
+      </div>
+      <form>
+        <div class="row">
+          <div class="col-4">
+            <input placeholder="Address Line 1" type="text" class="inputReg streetAddressNumber" id="street_number">
+          </div>
+          <div class="col-8">
+            <input placeholder="Address Line 2" type="text" class="inputReg streetAddressRoute" id="route">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-7 right-padding">
+            <input placeholder="City" type="text" class="inputReg cityAddress" id="locality">
+          </div>
+          <div class="col-2 no-padding">
+            <input placeholder="State" type="text" class="inputReg stateAddress" id="administrative_area_level_1">
+          </div>
+          <div class="col-3 left-padding">
+            <input placeholder="Zip" type="text" class="inputReg zipAddress" id="postal_code">
+          </div>
+        </div>
+
+      </form>
+      <button type="button" class="searchMap">Search</button>
+
+
+
+    </section>
+
+    <div class="push"></div>
+  </div>
+
+  <div class="locationInfo"></div>
+  <div class="pollingTimeTable"></div>
+
+  <div id="map"></div>
+
+  <footer class="footer">
+    <div class="titleWeb">a</div>
+  </footer>
+
+
+</body>
+
+</html>

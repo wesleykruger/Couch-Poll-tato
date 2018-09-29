@@ -1,0 +1,465 @@
+/* For Sticky Footer*/
+html,body{
+  height: 100%;
+  margin:0;
+}
+
+
+/* For Formatting */
+
+  .no-padding {
+    padding:0px;
+  }
+
+  .right-padding {
+    padding-right:0px;
+  }
+  .left-padding {
+    padding-left:0px;
+  }
+  .padding {
+    padding-left: 15px; 
+ }
+
+
+/* Font Styling */
+
+.blue{
+  color: rgb(46, 89, 143);
+}
+
+
+.contentAlign{
+  align-content: center;
+}
+
+/* header */
+.header{
+  max-width:620px;
+  padding-top:55px;
+  margin:0 auto;
+  border:0;
+  align-content: center;
+
+}
+.header-border {
+  background-image: url("../images/red-star.png");
+  background-repeat: repeat-x;
+  max-width: 100%;
+  height: 25px;
+}
+
+.logoBox{
+  align-content: middle;
+}
+
+.logoHead{
+  padding-bottom: 20px;
+  max-width: 115px;
+  max-height: 108px;
+  padding-right:10px;
+}
+
+.logoName{
+max-width: 477px;
+max-height: 47px;
+padding-left: 5px;
+padding-top: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+  .header{
+  max-width:620px;
+  padding-top:20px;
+  margin:0 auto;
+  border:0;
+  align-content: center;
+
+}
+
+.logoHead{
+  padding-bottom: 20px;
+  max-width: 115px;
+  max-height: 108px;
+  padding-right:0px;
+}
+
+.logoName{
+max-width: 477px;
+max-height: 47px;
+padding-left: 5px;
+}}
+
+@media only screen and (max-width: 568px) {
+  .header{
+  max-width:420px;
+  padding-top:20px;
+  margin:0 auto;
+  border:0;
+  align-content: center;
+
+}
+
+.logoMargin{
+  padding-left: 0px;
+}
+
+.logoHead{
+  padding-bottom: 20px;
+  max-width: 100px;
+  max-height: 106px;
+  padding-right:10px;
+}
+
+.logoName{
+max-width: 440px;
+max-height: 44px;
+padding-left: 5px;
+}
+
+}
+
+@media only screen and (max-width: 500px) {
+  .header{
+  max-width:420px;
+  padding-top:20px;
+  margin:0 auto;
+  border:0;
+  align-content: center;
+
+}
+
+.logoMargin{
+  padding-left: 0px;
+}
+
+.logoHead{
+  padding-bottom: 20px;
+  max-width: 85px;
+  max-height: 90px;
+  padding-right:10px;
+}
+
+.logoName{
+max-width: 360px;
+max-height: 35px;
+padding-left: 5px;
+}
+
+}
+
+/* Background */
+
+body {
+  background-color: rgb(235, 234, 217);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/uncle-sam.png);
+  background-position: top;
+  align-content: center;
+  min-height: 100%;
+  /*background-color: #4aaaa5; */
+  margin: 0 auto;
+  padding: 0;
+}
+
+.map{
+max-width: 960px;
+background:white;
+}
+
+
+/* Input Designs */
+.inputReg{
+  width: 100%;
+  color:rgb(148, 15, 21);
+  background-color:  rgb(235, 234, 217);
+  font-family: serif;
+}
+
+::placeholder{
+color: rgb(148, 15, 21)
+}
+
+/* Button */
+
+.position {
+  text-align: center;
+}
+.relative {
+  display: inline-block;
+}
+
+.spaceBtn {
+  background:none;
+  border: 0;
+  margin: 0 auto;
+  padding:0;
+}
+
+.btn{
+  max-width: 100px;
+  max-height: 100px;    
+}
+.btn:hover{
+    transform: scale(1.1);
+    transition: .1s;
+}
+
+/* For Rep Search */
+
+.repCenter {
+  text-align: center;
+}
+
+/* font titles */
+@font-face {
+  font-family:"legends";
+  src: url("../fonts/Carnevalee\ Freakshow.ttf");
+}
+
+legend {
+  font-family: "legends";
+  font-size: 40px;
+}
+
+.legends{
+  font-family: "nash";
+
+}
+
+@font-face{
+  font-family:"nash";
+  src: url("../fonts/NASHVILL.TTF")
+}
+
+/* footer */
+@font-face{
+  font-family:"font-image";
+  src: url("../fonts/laworder.ttf");
+}
+
+.titleWeb {
+  font-family: "font-image";
+  text-align: center;
+  color: rgb(235, 234, 217);
+  font-size:36px;
+}
+
+.footer {
+background-color: rgb(46, 89, 143);
+
+min-width: 100%;
+max-height: 75px;
+align-content: center;
+
+}
+
+.wrapper{
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+
+.footer,
+.push {
+  height: 50px;
+}
+
+/*  background-image: url("../images/Couch-PollTato.png");
+  background-size: 15%;
+  background-repeat: no-repeat;
+  /*background-image: url("http://pollingplacephotoproject.org/wp-content/uploads/2017/11/o-VOTING-facebook.jpg");
+
+}
+
+.bg-light {
+    /* The image used */
+    /*background-image: url("http://pollingplacephotoproject.org/wp-content/uploads/2017/11/o-VOTING-facebook.jpg");
+    background-repeat: repeat;
+}
+
+.site {
+  display: flex;
+  /* allows the main content to stretch the viewport height 
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: 'Quicksand', sans-serif;
+}*/
+
+
+.Navbart {
+  background-color: #F8F8F8;
+  border-color: #E7E7E7;
+}
+.site-content {
+  color: #777777;
+  flex: 1;
+}
+
+.navigation-container {
+  background-color: #ffffff;
+  border-bottom: 1px solid #777777;
+  padding: 0;
+}
+
+/* gets rid of preset padding of 15px */
+.navbar {
+  padding: 0;
+}
+
+/* styles Adrian Kyzer on top */
+.navbar-light .navbar-brand {
+  color: white;
+  font-family: Georgia, Times New Roman, Times, Serif;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+
+  .navbar-light .navbar-brand:hover {
+    color: #F6DB5F;
+    /* animation font color from white to yellow */
+    -webkit-animation-name: logo-name; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: logo-name;
+    animation-duration: 2s;
+  }
+    /* Safari 4.0 - 8.0 */
+    @-webkit-keyframes logo-name {
+      from {color: white;}
+      to {-color: #F6DB5F;}
+    }
+    /* Standard syntax */
+    @keyframes example {
+      from {color: white;}
+      to {color: #F6DB5F;}
+    }
+
+
+
+  .btn-primary:hover {
+    color: #4aaaa5;
+    /* animation of background color from teal to yellow */
+    background-color: #F6DB5F;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 2s;
+  }
+      /* Safari 4.0 - 8.0 */
+    @-webkit-keyframes example {
+        from {background-color: #4aaaa5;}
+        to {background-color: #F6DB5F;}
+    }
+    /* Standard syntax */
+    @keyframes example {
+        from {background-color: #4aaaa5;}
+        to {background-color: #F6DB5F;}
+    }
+
+/* styling for portfolio page  ***********************************************************/
+
+.portfolio-overlay {
+  background-color: #4aaaa5;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+  .card-img-overlay:hover {
+    background-color: rgba(246, 218, 96, 0.7);
+    padding: 0;
+    padding-bottom: 15px;
+    margin: 0 15px;
+  }
+
+.card-img-overlay {
+  display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: flex-end;
+  padding: 15px;
+}
+.repsearch-h1{
+  text-align:center;
+  margin-left:12px;
+}
+.rep-input{
+  margin-right:175px;
+}
+.title-rep{
+  font-weight:600;
+}
+.submit-rep{
+  margin-left:45%;
+}
+
+.rep-search-cont{
+  background:white;
+}
+
+@media only screen and (max-width: 575px) {
+
+    /* custom margin top for xs screens */
+    .content-row {
+      margin-top: 20px;
+    }
+    /* makes the logo or nav-brand a bit smaller */
+    .navbar-light .navbar-brand {
+      font-size: 24px;
+    }
+
+     .portfolio-col {
+       margin-bottom: 15px;
+     }
+     .rep-search-cont{
+      max-width:400px;
+    }
+     .rep-input, .rep-table{
+       display: inline-block;
+     }
+     table, thead, tbody, th, td, tr { 
+      display: block; 
+    }
+    
+   
+    thead tr { 
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    
+    
+    
+    td { 
+      /* Behave  like a "row" */
+      border: none;
+      position: relative;
+      padding-left: 50%; 
+    }
+    
+    td:before { 
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      top: 6px;
+      left: 6px;
+      width: 45%; 
+      padding-right: 10px; 
+      white-space: nowrap;
+    }
+    .repsearch-h1{
+      text-align:center;
+      margin-left:-55px;
+    }
+    .submit-rep{
+      margin-left:25%;
+    }
+     
+
+}
+
+
+
+
