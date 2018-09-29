@@ -262,6 +262,20 @@ align-content: center;
     align-content: flex-end;
   padding: 15px;
 }
+.repsearch-h1{
+  text-align:center;
+  margin-left:12px;
+}
+.rep-input{
+  margin-right:175px;
+}
+.title-rep{
+  font-weight:600;
+}
+.submit-rep{
+  margin-left:45%;
+}
+
 
 @media only screen and (max-width: 575px) {
 
@@ -277,11 +291,53 @@ align-content: center;
      .portfolio-col {
        margin-bottom: 15px;
      }
+     .rep-search-cont{
+      max-width:400px;
+    }
+     .rep-input, .rep-table{
+       display: inline-block;
+     }
+     table, thead, tbody, th, td, tr { 
+      display: block; 
+    }
+    
+   
+    thead tr { 
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    
+    
+    
+    td { 
+      /* Behave  like a "row" */
+      border: none;
+      position: relative;
+      padding-left: 50%; 
+    }
+    
+    td:before { 
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      top: 6px;
+      left: 6px;
+      width: 45%; 
+      padding-right: 10px; 
+      white-space: nowrap;
+    }
+    .repsearch-h1{
+      text-align:center;
+      margin-left:-55px;
+    }
+    .submit-rep{
+      margin-left:25%;
+    }
+     
 
 }
-.title-rep{
-  font-weight:600;
-}
-.repsearch-h1{
-  text-align:center;
-}
+
+
+
+

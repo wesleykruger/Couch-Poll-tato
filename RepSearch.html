@@ -15,7 +15,7 @@
         crossorigin="anonymous">
     <!-- Custom styles -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <title>Project1</title>
+    <title>Find Your Representatives...From Your Couch</title>
 </head>
 
 <body>
@@ -38,21 +38,23 @@
 
     </header>
     <br>
+    <div class="container rep-search-cont">
     <h1 class="repsearch-h1">Find Your Representatives</h1>
+    
     <div class="row rep-input">
         <div class="col-3 offset-3">Street Address
             <input type="text" class="address"></input>
         </div>
-        <div class="col-3">City:
+        <div class="col-3 offset-3">City:
             <input type="text" class="city"></input>
         </div>
     </div>
     <div class="row rep-input">
-        <div class="col-3 offset-3">State (Abbrev.):
+        <div class="col-3 offset-3">State:
             <br>
             <input type="text" class="state" maxlength="2" size="6"></input>
         </div>
-        <div class="col-3">Country:
+        <div class="col-3 offset-3">Country:
             <input type="text" value="US" class="country"></input>
         </div>
     </div>
@@ -65,8 +67,8 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-2 offset-8">
-        <button type="button" class="btn btn-primary submit">Submit</button>
+        <div class="col-2 offset-6 submit-rep">
+        <button type="button" class="btn btn-primary submit">Search</button>
     </div>
 </div>
     <table class="table table-hover rep-table">
@@ -86,7 +88,7 @@
 
         </tbody>
     </table>
-
+</div>
     <br>
     <footer class="footer">
         <div class="titleWeb">a</div>
