@@ -1,7 +1,3 @@
-if (localStorage.getItem("username") === null) {
-    window.location.href = "Auth.html";
-}
-
 const APIkey = "AIzaSyD70EcFlRlgIbc1ARNvns5CszqjaUyQzVI"
 const repAPI = "https://www.googleapis.com/civicinfo/v2/representatives?key="
 const twitterURL = "https://twitter.com/"
