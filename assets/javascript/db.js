@@ -64,9 +64,10 @@ $(document).ready(function () {
           errorMessage = error.message;
           console.log("error message: " + errorMessage);
           $(".bannerArea").html(`<div class="alert-danger text-center">${errorMessage}</div>`);
-
+          return errorMessage;
         });
       if (errorMessage === "") {
+        console.log(errorMessage)
         $(".bannerArea").html(`<div class="alert-success text-center">Registration successful! Please log in on the front page.</div>`);
       }
       database.ref("/users/" + emailKey).set({

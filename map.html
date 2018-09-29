@@ -32,7 +32,7 @@
         margin: 0;
         padding: 0;
       }
-
+      
     </style>
   <!-- Momentjs-->
   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
@@ -44,8 +44,6 @@
     crossorigin="anonymous"></script>
   <!-- local js-->
   <script src="assets/javascript/mapSearch.js"></script>
-  <title>Polling Locations...From Your Couch</title>
-
 </head>
 
 <body>
@@ -72,19 +70,23 @@
     <div class="header-border"></div>
     <br>
     <section class="container map">
-      <div class="row  padding  blue">
-        <legend class="repCenter">Poll Map</legend>
+      <div class="row padding blue">
+        <h3>Poll Map</h3>
       </div>
+      <div class="noData"></div>
 
       <div class="row">
         <div class="padding" id="locationField">
-          <input id="autocomplete" placeholder="Enter your address" type="text">
+          <input id="autocomplete" class="col-12" placeholder="Enter your address" type="text">
         </div>
       </div>
       <form>
         <div class="row">
-          <div class="col-12">
-            <input placeholder="Address Line" type="text" class="inputReg streetAddress" id="street_number">
+          <div class="col-4">
+            <input placeholder="Address Line 1" type="text" class="inputReg streetAddressNumber" id="street_number">
+          </div>
+          <div class="col-8">
+            <input placeholder="Address Line 2" type="text" class="inputReg streetAddressRoute" id="route">
           </div>
         </div>
         <div class="row">
@@ -100,22 +102,19 @@
         </div>
 
       </form>
-      <div class="row">
-        <div class="col-8"></div>
-        <div class="col-4">
-          <button class="spaceBtn searchMap"><img class="btn" src="assets/images/searchBtn.png"></button>
-        </div>
-      </div>
+      <button type="button" class="searchMap">Search</button>
+
 
 
     </section>
 
     <div class="push"></div>
   </div>
+
   <div class="locationInfo"></div>
   <div class="pollingTimeTable"></div>
 
-  <div class="gmaps" id="map"></div>
+  <div id="map"></div>
 
   <footer class="footer">
     <div class="titleWeb">a</div>
