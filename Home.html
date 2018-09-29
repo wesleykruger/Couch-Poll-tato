@@ -21,24 +21,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
   <script src="assets/javascript/logout.js"></script>
-
-  <style>
-    .jumbotron{
-        background-color:#2E2D88;
-        color:white;
-    }
-    /* Adds borders for tabs */
-    .tab-content {
-        border-left: 1px solid #ddd;
-        border-right: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
-        padding: 10px;
-    }
-    .nav-tabs {
-        margin-bottom: 0;
-    }
-    </style>
-
+<title>Politics...From Your Couch</title>
 
 </head>
 
@@ -67,14 +50,13 @@
     <section class="container ballot">
       <div class="bg-light">
         <!-- Title -->
-        <h3 class="blue center">Menu</h3>
+        <legend class="blue center">Menu</legend>
 
         <!-- Current -->
         <nav aria-label="breadcrumb">
           <div class="form-group ">
             <ol class="">
-              <li class="breadcrumb-item center"
-              ><a class="blue" href="RepSearch.html">
+              <li class="breadcrumb-item center"><a class="blue legends" href="RepSearch.html">
                   <img class="checkbox" src="assets/images/uncheckedBallot.png">
                   Find Your Current Representatives
                 </a>
@@ -87,7 +69,7 @@
           <div class="form-group">
             <ol class="">
               <li class="breadcrumb-item center">
-                <a class="blue" href="map.html">
+                <a class="blue legends" href="map.html">
                   <img class="checkbox" src="assets/images/uncheckedBallot.png">
                   Find Voting Location on Map
                 </a></li>
@@ -95,17 +77,24 @@
         </nav>
 
 
-
-        <button type="button" class="logoutBtn">Logout</button>
+        <div class="row">
+          <div class="col-4 right-padding"></div>
+          <div class="col-4 no-padding">
+            <button type="submit" class="spaceBtn"><img class="btn" src="assets/images/logoutBtn.png"></button>
+          </div>
+          <div class="col-4 left-padding"></div>
+        </div>
       </div>
     </section>
     <br>
     <div class="push"></div>
   </div>
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="titleWeb">a</div>
-    </footer>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="titleWeb">a</div>
+  </footer>
 
 
 </body>
+
+</html>

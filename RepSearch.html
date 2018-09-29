@@ -43,58 +43,62 @@
 
     </header>
     <br>
+    <section>
+        <div class="container rep-search-cont">
+            <legend class="repCenter blue">Find Your Representatives</legend>
 
-    <h1 class="repsearch-h1">Find Your Representatives</h1>
+            <div class="row">
+                <div class="col-12">
+                    <input type="text" class="address inputReg" placeholder="Address"></input>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col-7 right-padding">
+                        <input type="text" class="city inputReg" placeholder="City"></input>
+                    </div>
+                    <div class="col-2 no-padding">
+                        <input type="text" class="state inputReg" placeholder="State" maxlength="2" size="6"></input>
+                    </div>
+                    <div class="col-3 left-padding">
+                        <input type="text" value="US" class="country inputReg"></input>
+                    </div>
+                </div>
 
-    <div class="row rep-input">
-        <div class="col-3 offset-3">Street Address
-            <input type="text" class="address"></input>
-        </div>
-        <div class="col-3 offset-3">City:
-            <input type="text" class="city"></input>
-        </div>
-    </div>
-    <div class="row rep-input">
-        <div class="col-3 offset-3">State:
-            <br>
-            <input type="text" class="state" maxlength="2" size="6"></input>
-        </div>
-        <div class="col-3 offset-3">Country:
-            <input type="text" value="US" class="country"></input>
-        </div>
-    </div>
-    <div class="row rep-input">
-        <div class="col-6 offset-3">
-            <input type="checkbox" class="local" checked>local</input>
-            <input type="checkbox" class="county" checked>County</input>
-            <input type="checkbox" class="state" checked>State</input>
-            <input type="checkbox" class="federal" checked>Federal</input>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-2 offset-6 submit-rep">
-            <button type="button" class="btn btn-primary submit">Search</button>
-        </div>
-    </div>
-    <table class="table table-hover rep-table">
-        <thead>
-            <tr>
-                <th scope="col" class="title-rep">Image</th>
-                <th scope="col" class="title-rep">Name</th>
-                <th scope="col" class="title-rep">Office</th>
-                <th scope="col" class="title-rep">Party</th>
-                <th scope="col" class="title-rep">Address</th>
-                <th scope="col" class="title-rep">Phone Number</th>
-                <th scope="col" class="title-rep">Web Page</th>
-                <th scope="col" class="title-rep">Social Media</th>
-            </tr>
-        </thead>
-        <tbody class="representatives">
 
-        </tbody>
-    </table>
+            
+            <div class="row ">
+                <div class="col-8  legends blue right-padding">
+                    <input type="checkbox" class="local" checked>Local</input>
+                    <input type="checkbox" class="county" checked>County</input>
+                    <input type="checkbox" class="state" checked>State</input>
+                    <input type="checkbox" class="federal" checked>Federal</input>
+                </div>
+                <div class="col-3 left-padding">
+                    <button type="button" class="spaceBtn submit"><img class="btn" src="assets/images/searchBtn.png"></button>
+                </div>
 
-    </div>
+            <table class="table table-hover rep-table">
+                <thead>
+                    <tr>
+                        <th scope="col" class="title-rep">Image</th>
+                        <th scope="col" class="title-rep">Name</th>
+                        <th scope="col" class="title-rep">Office</th>
+                        <th scope="col" class="title-rep">Party</th>
+                        <th scope="col" class="title-rep">Address</th>
+                        <th scope="col" class="title-rep">Phone Number</th>
+                        <th scope="col" class="title-rep">Web Page</th>
+                        <th scope="col" class="title-rep">Social Media</th>
+                    </tr>
+                </thead>
+                <tbody class="representatives">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="push"></div>
+
+    </section>
+
     <br>
     <footer class="footer">
         <div class="titleWeb">a</div>
