@@ -45,7 +45,7 @@ $(document).ready(function () {
 
 
         const searchRep = address => {
-            $.get("https://www.googleapis.com/civicinfo/v2/representatives?key=" + APIkey + "&address=" + AddressPOST/*+"&levels="+govt_level*/).then(response => {
+            $.get("https://www.googleapis.com/civicinfo/v2/representatives?key=" + APIkey + "&address=" + AddressPOST).then(response => {
                 for (let i = 0; i < response.officials.length; i++) {
                     var photo = "assets/images/blank-person.jpg"
                     var name = "Not Listed"
