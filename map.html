@@ -32,7 +32,7 @@
         margin: 0;
         padding: 0;
       }
-      
+
     </style>
   <!-- Momentjs-->
   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
@@ -44,32 +44,36 @@
     crossorigin="anonymous"></script>
   <!-- local js-->
   <script src="assets/javascript/mapSearch.js"></script>
+  <title>Polling Locations...From Your Couch</title>
+
 </head>
 
 <body>
   <div class="wrapper">
     <header>
       <div class="header container">
-        <div class="row">
-          <div class="col-1 logoMargin"></div>
-          <!-- Logo -->
-          <div class="col-2 logoMargin">
-            <img class="logoHead" src="assets/images/Couch-PollTato.png">
+        <a href="Home.html">
+          <div class="row">
+            <div class="col-1 logoMargin"></div>
+            <!-- Logo -->
+            <div class="col-2 logoMargin">
+              <img class="logoHead" src="assets/images/Couch-PollTato.png">
+            </div>
+            <!-- Header -->
+            <div class="col-8">
+              <img class="logoName" src="assets/images/Couch-PollTato-Name.png">
+            </div>
+            <div class="col-1"></div>
           </div>
-          <!-- Header -->
-          <div class="col-8">
-            <img class="logoName" src="assets/images/Couch-PollTato-Name.png">
-          </div>
-          <div class="col-1"></div>
-        </div>
+        </a>
       </div>
       <!-- Header Botom Border -->
     </header>
     <div class="header-border"></div>
     <br>
     <section class="container map">
-      <div class="row padding blue">
-        <h3>Poll Map</h3>
+      <div class="row  padding  blue">
+        <legend class="repCenter">Poll Map</legend>
       </div>
 
       <div class="row">
@@ -80,7 +84,7 @@
       <form>
         <div class="row">
           <div class="col-12">
-            <input placeholder="Address Line 1" type="text" class="inputReg streetAddress" id="street_number">
+            <input placeholder="Address Line" type="text" class="inputReg streetAddress" id="street_number">
           </div>
         </div>
         <div class="row">
@@ -96,8 +100,12 @@
         </div>
 
       </form>
-      <button class="searchMap">Search</button>
-
+      <div class="row">
+        <div class="col-8"></div>
+        <div class="col-4">
+          <button class="spaceBtn searchMap"><img class="btn" src="assets/images/searchBtn.png"></button>
+        </div>
+      </div>
 
 
     </section>
@@ -107,7 +115,7 @@
   <div class="locationInfo"></div>
   <div class="pollingTimeTable"></div>
 
-  <div id="map"></div>
+  <div class="gmaps" id="map"></div>
 
   <footer class="footer">
     <div class="titleWeb">a</div>

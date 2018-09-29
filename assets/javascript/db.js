@@ -34,38 +34,6 @@ $(document).ready(function () {
     }
   });
 
-  // Check localStorage to see if user is logged in
-  if (localStorage.getItem("username") === null) {
-    loggedIn = false;
-  } else {
-    loggedIn = true;
-  }
-
-
-  $(".btnLogin").on("click", function () {
-    let email = $(".loginEmail").val();
-    console.log(email);
-    let pass = $(".loginPassword").val();
-    if (checkExistingEmail === true) {
-      console.log("existing email check");
-    }
-    const auth = firebase.auth();
-    // Sign in
-    auth.setPersistence(firebase.auth.Auth.Persistence.NONE)
-      .then(function () {
-        // Existing and future Auth states are now persisted in the current
-        // session only. Closing the window would clear any existing state even
-        // if a user forgets to sign out.
-        return firebase.auth().signInWithEmailAndPassword(email, pass);
-      })
-      .catch(function (error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-      });
-    // Set localStorage
-    localStorage.setItem("username", email);
-  })
 
   // Create new user profiles
   $(".createProfileBtn").on("click", function () {
@@ -85,10 +53,7 @@ $(document).ready(function () {
       zip: $(".zipRegister").val(),
     };
 
-    console.log("new user: " + newUser);
-    //database.ref("/users").push(newUser);
     let emailKey = encodeKey(newUser.emailAddress);
-    console.log("email key: " + emailKey);
 
     database.ref("/users").once("value", function (snapshot) {
       let errorMessage = "";
@@ -98,6 +63,7 @@ $(document).ready(function () {
           // Handle Errors here.
           errorMessage = error.message;
           console.log("error message: " + errorMessage);
+<<<<<<< HEAD
           $(".error").html(`<div class="alert-danger text-center">${errorMessage}</div>`);
           return errorMessage;
        
@@ -107,6 +73,14 @@ $(document).ready(function () {
         } }) //else {
           //$(".bannerArea").html(`<div class="alert-danger text-center">${errorMessage}</div>`);
         //}
+=======
+          $(".bannerArea").html(`<div class="alert-danger text-center">${errorMessage}</div>`);
+
+        });
+      if (errorMessage === "") {
+        $(".bannerArea").html(`<div class="alert-success text-center">Registration successful! Please log in on the front page.</div>`);
+      }
+>>>>>>> a929f9c0093a3260fbfec106042eb903ac7a25f3
       database.ref("/users/" + emailKey).set({
         firstName: newUser.firstName,
         middleName: newUser.middleName,

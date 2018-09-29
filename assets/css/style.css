@@ -174,10 +174,63 @@ background:white;
   width: 100%;
   color:rgb(148, 15, 21);
   background-color:  rgb(235, 234, 217);
+  font-family: serif;
 }
 
 ::placeholder{
 color: rgb(148, 15, 21)
+}
+
+/* Button */
+
+.position {
+  text-align: center;
+}
+.relative {
+  display: inline-block;
+}
+
+.spaceBtn {
+  background:none;
+  border: 0;
+  margin: 0 auto;
+  padding:0;
+}
+
+.btn{
+  max-width: 100px;
+  max-height: 100px;    
+}
+.btn:hover{
+    transform: scale(1.1);
+    transition: .1s;
+}
+
+/* For Rep Search */
+
+.repCenter {
+  text-align: center;
+}
+
+/* font titles */
+@font-face {
+  font-family:"legends";
+  src: url("../fonts/Carnevalee\ Freakshow.ttf");
+}
+
+legend {
+  font-family: "legends";
+  font-size: 40px;
+}
+
+.legends{
+  font-family: "nash";
+
+}
+
+@font-face{
+  font-family:"nash";
+  src: url("../fonts/NASHVILL.TTF")
 }
 
 /* footer */
@@ -342,6 +395,9 @@ align-content: center;
   margin-left:45%;
 }
 
+.rep-search-cont{
+  background:white;
+}
 
 @media only screen and (max-width: 575px) {
 
