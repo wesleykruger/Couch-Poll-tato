@@ -21,7 +21,7 @@ $(document).ready(function () {
 
     $(".logoutBtn").on("click", function () {
         firebase.auth().signOut().then(function () {
-            window.location.href = "Auth.html";
+            window.location.href = "index.html";
         }).catch(function (error) {
             console.log(error);
         });
