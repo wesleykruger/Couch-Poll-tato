@@ -32,7 +32,12 @@
         margin: 0;
         padding: 0;
       }
-      
+      .gmaps{
+        max-width: 960px;
+        margin: 0, auto;
+        position: none;
+      }
+
     </style>
   <!-- Momentjs-->
   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
@@ -44,6 +49,8 @@
     crossorigin="anonymous"></script>
   <!-- local js-->
   <script src="assets/javascript/mapSearch.js"></script>
+  <title>Polling Locations...From Your Couch</title>
+
 </head>
 
 <body>
@@ -68,8 +75,8 @@
     <div class="header-border"></div>
     <br>
     <section class="container map">
-      <div class="row padding blue">
-        <h3>Poll Map</h3>
+      <div class="row  padding  blue">
+        <legend class="repCenter">Poll Map</legend>
       </div>
 
       <div class="row">
@@ -80,7 +87,7 @@
       <form>
         <div class="row">
           <div class="col-12">
-            <input placeholder="Address Line 1" type="text" class="inputReg streetAddress" id="street_number">
+            <input placeholder="Address Line" type="text" class="inputReg streetAddress" id="street_number">
           </div>
         </div>
         <div class="row">
@@ -96,8 +103,12 @@
         </div>
 
       </form>
-      <button class="searchMap">Search</button>
-
+      <div class="row">
+        <div class="col-8"></div>
+        <div class="col-4">
+          <button class="spaceBtn searchMap"><img class="btn" src="assets/images/searchBtn.png"></button>
+        </div>
+      </div>
 
 
     </section>
@@ -107,7 +118,7 @@
   <div class="locationInfo"></div>
   <div class="pollingTimeTable"></div>
 
-  <div id="map"></div>
+  <div class="gmaps" id="map"></div>
 
   <footer class="footer">
     <div class="titleWeb">a</div>
