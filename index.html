@@ -1,53 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Project1</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/javascript/main.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-t
+    o-fit=no">
+  <!-- reset.css -->
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <!-- link to google fonts Quicksand  -->
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <!-- link to my own custom stylesheet style.css  -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/auth.css">
+
 
 </head>
+
+
 <body>
-    <form>
-        <div class="form-group">
-          <label for="emailAddressEntry">Email address</label>
-          <input type="email" class="form-control" class="emailAddress" aria-describedby="emailHelp" placeholder="Enter email">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+<div class="wrapper">
+  <!-- Header Section -->
+  <header>
+    <div class="header container">
+      <div class="row">
+        <div class="col-1 logoMargin"></div>
+        <!-- Logo -->
+        <div class="col-2 logoMargin">
+          <img class="logoHead" src="assets/images/Couch-PollTato.png">
         </div>
-        <div class="form-group">
-          <label for="passwordEntry">Password</label>
-          <input type="password" class="form-control" class="passwordEntry" placeholder="Password">
+        <!-- Header -->
+        <div class="col-8">
+          <img class="logoName" src="assets/images/Couch-PollTato-Name.png">
         </div>
-        <div class="form-group">
-            <label for="inputAddress">Address</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        <div class="col-1"></div>
+      </div>
+    </div>
+    <!-- Header Botom Border -->
+  </header>
+  <div class="header-border"></div>
+
+
+  <!-- Login Section-->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <!-- Title -->
+            <h5 class="card-title text-center blue">Sign In</h5>
+            <form class="form-signin">
+              <!-- Email -->
+              <div class="form-label-group">
+                <input type="email" id="inputEmail" class="form-control inputReg" placeholder="Email address" required
+                  autofocus>
+              </div>
+              <!-- Password -->
+              <div class="form-label-group">
+                <input type="password" id="inputPassword" class="form-control inputReg" placeholder="Password" required>
+              </div>
+              <!-- Remember Password Box -->
+              <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label blue" for="customCheck1">Remember password</label>
+              </div>
+              <div class="row">
+                <!-- Log In Button -->
+                <div class="col-4">
+                  <button class="btnLogin loginBtn" type="submit"><img class="btn" src="assets/images/loginBtn.png"></button>
+                </div>
+                <div class="col-4 center blue">or</div>
+                <!-- Register Button -->
+                <div class="col-4">
+                  <a type="submit" href="Profile.html" type="submit">
+                    <i class="fa fa-search"></i>
+                    <button type="button" class="registerBtn"><img class="btn" src="assets/images/signupBtn.png"></button>
+                  </a>
+                </div>
+              </div>
           </div>
-          <div class="form-group">
-            <label for="inputAddress2">Address 2</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-          </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="inputCity">City</label>
-              <input type="text" class="form-control" id="inputCity">
-            </div>
-            <div class="form-group col-md-4">
-              <label for="inputState">State</label>
-              <select id="inputState" class="form-control">
-                <option selected>Choose...</option>
-                <option>...</option>
-              </select>
-            </div>
-            <div class="form-group col-md-2">
-              <label for="inputZip">Zip</label>
-              <input type="text" class="form-control" id="inputZip">
-            </div>
-          </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="push"></div>
+</div>
+  <!-- Footer-->
+  <footer class="footer">
+    <div class="titleWeb">a</div>
+  </footer>
 </body>
-</html>
