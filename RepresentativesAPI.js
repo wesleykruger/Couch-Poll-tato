@@ -20,6 +20,10 @@ $(document).ready(function () {
         let AddressLookup = Address + City + State + Country
         let AddressPOST = encodeURIComponent(AddressLookup)
 
+        /* This code could be used to filter representative results to select only federal, state, or local reps. 
+        At this time, the feature has not been fleshed out enough to be functional on the reps page. 
+        So, I've commented out this functionality, 
+        which could be useful given a greater project timeframe.
         var govt_level = []
         if ($(".local").is(':checked')) {
             govt_level.push('undefined')
@@ -33,7 +37,7 @@ $(document).ready(function () {
         if ($(".federal").is(':checked')) {
             govt_level.push('country')
         }
-        var govt_level = []
+        var govt_level = []*/
         var addresses = []
         var arrOfObjects = []
         var arrOfficials = []
@@ -72,8 +76,8 @@ $(document).ready(function () {
             <td class="official-party">${party}</td>
             <td class="official-address">${address.line1}<br>${address.line2}${address.city}<br>${address.state}<br>${address.zip}<br></td>
                         <td class="official-phone">${phones}</td>
-                        <td class="official-url"><a href=${urls}target="_blank">Website</a></td>
-                        <td class="official-twitter"><a href=${twitter}>
+                        <td class="official-url"><a href=${urls} target="_blank">Website</a></td>
+                        <td class="official-twitter"><a href=${twitter} target="_blank">
                         <img alt="Twitter_Icon" src="assets/images/twitterlogo.png" width="50" height="50"></a>
                          </td>
                          <td class="official-facebook"><a href=${facebook}>
