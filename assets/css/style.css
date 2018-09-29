@@ -4,6 +4,24 @@ html,body{
   margin:0;
 }
 
+
+/* For Formatting */
+
+  .no-padding {
+    padding:0px;
+  }
+
+  .right-padding {
+    padding-right:0px;
+  }
+  .left-padding {
+    padding-left:0px;
+  }
+  .padding {
+    padding-left: 15px; 
+ }
+
+
 /* Font Styling */
 
 .blue{
@@ -148,6 +166,11 @@ body {
 .background{
 
 }
+
+.map{
+max-width: 960px;
+}
+
 
 /* Input Designs */
 .inputReg{
