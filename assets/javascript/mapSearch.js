@@ -97,10 +97,9 @@ $(document).ready(function () {
                 let profileCity = profileObj.city;
                 let profileState = profileObj.state;
                 let profileZip = profileObj.zip;
-                let profileAddress = profileAdd1 + ", " + profileCity + "," + profileState + " " + profileZip;
 
                 $(".streetAddressNumber").val(profileAdd1Num);
-                $(".streetAddressRoute").val(profileAddRoute)
+                $(".streetAddressRoute").val(profileAddRoute);
                 $(".cityAddress").val(profileCity);
                 $(".stateAddress").val(profileState);
                 $(".zipAddress").val(profileZip);
