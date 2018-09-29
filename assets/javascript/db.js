@@ -63,11 +63,11 @@ $(document).ready(function () {
           // Handle Errors here.
           errorMessage = error.message;
           console.log("error message: " + errorMessage);
+          $(".bannerArea").html(`<div class="alert-danger text-center">${errorMessage}</div>`);
+
         });
       if (errorMessage === "") {
         $(".bannerArea").html(`<div class="alert-success text-center">Registration successful! Please log in on the front page.</div>`);
-      } else {
-        $(".bannerArea").html(`<div class="alert-danger text-center">${errorMessage}</div>`);
       }
       database.ref("/users/" + emailKey).set({
         firstName: newUser.firstName,
