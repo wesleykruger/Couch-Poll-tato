@@ -1,8 +1,3 @@
-// Kick user back to login if somehow they get here without logging in
-if (localStorage.getItem("username") === null) {
-    window.location.href = "Auth.html";
-}
-
 //This is the section to trigger the function to initiate our Google APIs
 var map;
 function initMap() {
@@ -79,27 +74,42 @@ $(document).ready(function () {
     firebase.initializeApp(config);
 
     const database = firebase.database();
-    const emailKey = encodeKey(localStorage.getItem("username"));
 
 
-    // Set address to profile's address by default, simulate search
-    database.ref(`/users/${emailKey}/`).once('value').then(function (snap) {
-        let profileObj = snap.val();
-        console.log(profileObj);
-        let profileAdd1 = profileObj.address1;
-        let profileAdd1Num = profileAdd1.substring(0, indexOf(" ") - 1);
-        let profileAddRoute = profileAdd1.substring(profileAdd1Num.length, profileAdd1.length);
-        //let profileAdd2 = profileObj.address2;
-        let profileCity = profileObj.city;
-        let profileState = profileObj.state;
-        let profileZip = profileObj.zip;
-        let profileAddress = profileAdd1 + ", " + profileCity + "," + profileState + " " + profileZip;
+    firebase.auth().onAuthStateChanged(firebaseUser => {
+        if (firebaseUser) {
+            console.log("logged in");
+            console.log(firebaseUser.email)
+            loggedIn = true;
+            let currentUser = firebaseUser.email;
+            console.log("current user: " + currentUser)
+            const emailKey = encodeKey(currentUser);
+            console.log(emailKey);
 
-        $(".streetAddressNumber").val(profileAdd1Num);
-        $(".streetAddressRoute").val(profileAddRoute)
-        $(".cityAddress").val(profileCity);
-        $(".stateAddress").val(profileState);
-        $(".zipAddress").val(profileZip);
+            // Set address to profile's address by default, simulate search
+            database.ref(`/users/${emailKey}/`).once('value').then(function (snap) {
+                let profileObj = snap.val();
+                console.log(profileObj);
+                let profileAdd1 = profileObj.address1;
+                let profileAdd1Num = profileAdd1.substring(0, profileAdd1.indexOf(" ") - 1);
+                let profileAddRoute = profileAdd1.substring(profileAdd1Num.length, profileAdd1.length);
+                //let profileAdd2 = profileObj.address2;
+                let profileCity = profileObj.city;
+                let profileState = profileObj.state;
+                let profileZip = profileObj.zip;
+                let profileAddress = profileAdd1 + ", " + profileCity + "," + profileState + " " + profileZip;
+
+                $(".streetAddressNumber").val(profileAdd1Num);
+                $(".streetAddressRoute").val(profileAddRoute)
+                $(".cityAddress").val(profileCity);
+                $(".stateAddress").val(profileState);
+                $(".zipAddress").val(profileZip);
+            });
+
+        } else {
+            console.log("logged out");
+            loggedIn = false;
+        }
     });
 
 
@@ -117,7 +127,7 @@ $(document).ready(function () {
         }
 
         let searchAddress = streetAddressNum + " " + streetAddressRoute + ", " + cityAddress + ", " + stateAddress + " " + zipAddress;
-        console.log(searchAddress);
+        console.log("search address: " + searchAddress);
         var locations = [];
 
         var testAddress = "2515 Catamount St, Bozeman, MT 59715";
@@ -127,20 +137,18 @@ $(document).ready(function () {
         let AddressPOST = encodeURIComponent(AddressLookup)
         const searchPoll = address => {
             $.get(locationsUrl + electionID + "&address=" + searchAddress/*+"&levels="+govt_level*/).then(response => {
-                console.log(response);
+                if ($(".locationInfo").length != 0) {
+                    $(".locationInfo").empty();
+                }
+
+                if ($(".pollingTimeTable").length != 0) {
+                    $(".pollingTimeTable").empty();
+                }
                 if (!(response.earlyVoteSites)) {
                     $(".noData").html(`<div class="alert-danger">Early voting information is not yet available for this location. You can visit <a href ="https://docs.google.com/spreadsheets/d/11XD-WNjtNo3QMrGhDsiZH9qZ4N8RYmfpszJOZ_qH1g8/edit#gid=0" target="_blank">this page</a> to see when your location's voting data will be available. Please come back and visit us then!</a> </div>`)
                 }
                 else {
                     // Empty the div so we don't have append multiple if user clicks search >1 time
-                    if ($(".locationInfo").length != 0) {
-                        $(".locationInfo").empty();
-                    }
-
-                    if ($(".pollingTimeTable").length != 0) {
-                        $(".pollingTimeTable").empty();
-                    }
-
                     $(".pollingTimeTable").append(`<div class="table-wrapper-scroll-y">
                 <table class="table table-bordered table-striped timeTable"<thead>
                 <tr>
