@@ -101,8 +101,6 @@ $(document).ready(function () {
         let cityAddress = $(".cityAddress");
         let stateAddress = $(".stateAddress");
         let zipAddress = $(".zipAddress");
-        let countryAddress = $(".countryAddress");
-
         var locations = [];
 
         var testAddress = "2515 Catamount St, Bozeman, MT 59715";
