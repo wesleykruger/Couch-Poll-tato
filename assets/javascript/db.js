@@ -65,8 +65,24 @@ $(document).ready(function () {
           console.log("error message: " + errorMessage);
           $(".bannerArea").html(`<div class="alert-danger text-center">${errorMessage}</div>`);
           return errorMessage;
+        }).then(function() {
+          if( !$.trim( $('.bannerArea').text() ).length ) {
+            $(".bannerArea").html(`<div class="alert-success text-center">Registration successful! Please log in on the front page.</div>`);
+                database.ref("/users/" + emailKey).set({
+            firstName: newUser.firstName,
+            middleName: newUser.middleName,
+            lastName: newUser.lastName,
+            email: emailKey,
+            password: newUser.password,
+            DOB: newUser.DOB,
+            address1: newUser.address1,
+            address2: newUser.address2,
+            city: newUser.city,
+            state: newUser.state,
+            zip: newUser.zip
+          });
+          }
         });
-
 
 
       /*
@@ -123,22 +139,6 @@ $(".createGoogleBtn").on("click", function () {
 
     });
 
-    if( !$.trim( $('.bannerArea').html() ).length ) {
-      $(".bannerArea").html(`<div class="alert-success text-center">Registration successful! Please log in on the front page.</div>`);
-          database.ref("/users/" + emailKey).set({
-      firstName: newUser.firstName,
-      middleName: newUser.middleName,
-      lastName: newUser.lastName,
-      email: emailKey,
-      password: newUser.password,
-      DOB: newUser.DOB,
-      address1: newUser.address1,
-      address2: newUser.address2,
-      city: newUser.city,
-      state: newUser.state,
-      zip: newUser.zip
-    });
-    }
 
 
 
