@@ -1,5 +1,6 @@
     //This is the section to trigger the function to initiate our Google APIs
     var map;
+    var votingSchedule="https://docs.google.com/spreadsheets/d/11XD-WNjtNo3QMrGhDsiZH9qZ4N8RYmfpszJOZ_qH1g8/edit#gid=0"
     function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
             center: { lat: -34.397, lng: 150.644 },
@@ -80,7 +81,9 @@ $(document).ready(function() {
         let AddressPOST = encodeURIComponent(AddressLookup)
         const searchPoll = address => {
             $.get(locationsUrl + electionID + "&address=" + AddressPOST/*+"&levels="+govt_level*/).then(response => {
-
+                let noEarlyVoting="Early voting information is not yet available for this location. You can visit"+"<a href="+"https://docs.google.com/spreadsheets/d/11XD-WNjtNo3QMrGhDsiZH9qZ4N8RYmfpszJOZ_qH1g8/edit#gid=0"+">"+"target="+"_blank"+">Voting Schedule</a>"+ "to see when your location's voting data will be available, and then come back to find your polling place!</a>"
+               if(!(response.earlyVoteSites)){noEarlyVoting}
+               else{
                 // Empty the div so we don't have append multiple if user clicks search >1 time
                 if ($(".locationInfo").length != 0) {
                     $(".locationInfo").empty();
@@ -129,7 +132,7 @@ $(document).ready(function() {
                      </td>`
                     );
                 }//end populate
-
+            }
                 //put markers on map
                 locations.forEach(address => {
                     let parsedAddress = urlAddress(address);
