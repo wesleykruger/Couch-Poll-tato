@@ -91,7 +91,7 @@ $(document).ready(function () {
                 let profileObj = snap.val();
                 console.log(profileObj);
                 let profileAdd1 = profileObj.address1;
-                let profileAdd1Num = profileAdd1.substring(0, profileAdd1.indexOf(" ") - 1);
+                let profileAdd1Num = profileAdd1.substring(0, profileAdd1.indexOf(" "));
                 let profileAddRoute = profileAdd1.substring(profileAdd1Num.length, profileAdd1.length);
                 //let profileAdd2 = profileObj.address2;
                 let profileCity = profileObj.city;
