@@ -1,8 +1,42 @@
+/* For Sticky Footer*/
+html,body{
+  height: 100%;
+  margin:0;
+}
+
+
+/* For Formatting */
+
+  .no-padding {
+    padding:0px;
+  }
+
+  .right-padding {
+    padding-right:0px;
+  }
+  .left-padding {
+    padding-left:0px;
+  }
+  .padding {
+    padding-left: 15px; 
+ }
+
+
+/* Font Styling */
+
+.blue{
+  color: rgb(46, 89, 143);
+}
+
+
+.contentAlign{
+  align-content: center;
+}
 
 /* header */
 .header{
   max-width:620px;
-  padding-top:20px;
+  padding-top:55px;
   margin:0 auto;
   border:0;
   align-content: center;
@@ -118,10 +152,32 @@ padding-left: 5px;
 
 body {
   background-color: rgb(235, 234, 217);
-
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/uncle-sam.png);
+  background-position: top;
+  align-content: center;
+  min-height: 100%;
   /*background-color: #4aaaa5; */
   margin: 0 auto;
   padding: 0;
+}
+
+.map{
+max-width: 960px;
+background:white;
+}
+
+
+/* Input Designs */
+.inputReg{
+  width: 100%;
+  color:rgb(148, 15, 21);
+  background-color:  rgb(235, 234, 217);
+}
+
+::placeholder{
+color: rgb(148, 15, 21)
 }
 
 /* footer */
@@ -140,10 +196,20 @@ body {
 .footer {
 background-color: rgb(46, 89, 143);
 
-max-width: 100%;
+min-width: 100%;
 max-height: 75px;
 align-content: center;
 
+}
+
+.wrapper{
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+
+.footer,
+.push {
+  height: 50px;
 }
 
 /*  background-image: url("../images/Couch-PollTato.png");
@@ -262,6 +328,20 @@ align-content: center;
     align-content: flex-end;
   padding: 15px;
 }
+.repsearch-h1{
+  text-align:center;
+  margin-left:12px;
+}
+.rep-input{
+  margin-right:175px;
+}
+.title-rep{
+  font-weight:600;
+}
+.submit-rep{
+  margin-left:45%;
+}
+
 
 @media only screen and (max-width: 575px) {
 
@@ -277,5 +357,53 @@ align-content: center;
      .portfolio-col {
        margin-bottom: 15px;
      }
+     .rep-search-cont{
+      max-width:400px;
+    }
+     .rep-input, .rep-table{
+       display: inline-block;
+     }
+     table, thead, tbody, th, td, tr { 
+      display: block; 
+    }
+    
+   
+    thead tr { 
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    
+    
+    
+    td { 
+      /* Behave  like a "row" */
+      border: none;
+      position: relative;
+      padding-left: 50%; 
+    }
+    
+    td:before { 
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      top: 6px;
+      left: 6px;
+      width: 45%; 
+      padding-right: 10px; 
+      white-space: nowrap;
+    }
+    .repsearch-h1{
+      text-align:center;
+      margin-left:-55px;
+    }
+    .submit-rep{
+      margin-left:25%;
+    }
+     
 
 }
+
+
+
+

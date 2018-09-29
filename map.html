@@ -22,6 +22,7 @@
          * element that contains the map. */
       #map {
         height: 50%;
+        max-width:960px;;
       }
   
       /* Optional: Makes the sample page fill the window. */
@@ -46,51 +47,70 @@
 </head>
 
 <body>
-  <footer class="footer">
-    <div class="titleWeb"></div>
-  </footer>
+  <div class="wrapper">
+    <header>
+      <div class="header container">
+        <div class="row">
+          <div class="col-1 logoMargin"></div>
+          <!-- Logo -->
+          <div class="col-2 logoMargin">
+            <img class="logoHead" src="assets/images/Couch-PollTato.png">
+          </div>
+          <!-- Header -->
+          <div class="col-8">
+            <img class="logoName" src="assets/images/Couch-PollTato-Name.png">
+          </div>
+          <div class="col-1"></div>
+        </div>
+      </div>
+      <!-- Header Botom Border -->
+    </header>
+    <div class="header-border"></div>
+    <br>
+    <section class="container map">
+      <div class="row padding blue">
+        <h3>Poll Map</h3>
+      </div>
+
+      <div class="row">
+        <div class="padding" id="locationField">
+          <input id="autocomplete" placeholder="Enter your address" type="text">
+        </div>
+      </div>
+      <form>
+        <div class="row">
+          <div class="col-4">
+            <input placeholder="Address Line 1" type="text" class="inputReg streetAddress" id="street_number">
+          </div>
+          <div class="col-8">
+            <input placeholder="Address Line 2" type="text" class="inputReg streetAddress" id="route">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-7 right-padding">
+            <input placeholder="City" type="text" class="inputReg cityAddress" id="locality">
+          </div>
+          <div class="col-2 no-padding">
+            <input placeholder="State" type="text" class="inputReg stateAddress" id="administrative_area_level_1">
+          </div>
+          <div class="col-3 left-padding">
+            <input placeholder="Zip" type="text" class="inputReg zipAddress" id="postal_code">
+          </div>
+        </div>
+
+      </form>
+      <button class="searchMap">Search</button>
 
 
-  <h3>Poll Map</h3>
 
-  <div>
-    <table class="poll-location"></table>
+    </section>
+
+    <div class="push"></div>
   </div>
-  <div id="locationField">
-    <input id="autocomplete" placeholder="Enter your address" type="text">
-  </div>
-  <form>
-    <div class="form-group">
-      <label for="search streetAddress">Address</label>
-      <input type="text" class="form-control streetAddress" id="street_number"><input type="text" class="form-control streetAddress"
-        id="route">
-    </div>
-    <div class="form-group">
-      <label for="search cityAddress">City</label>
-      <input type="text" class="form-control cityAddress" id="locality">
-    </div>
-    <div class="form-group">
-      <label for="search stateAddress">State</label>
-      <input type="text" class="form-control stateAddress" id="administrative_area_level_1">
-    </div>
-    <div class="form-group">
-      <label for="search zipAddress">Zip</label>
-      <input type="text" class="form-control zipAddress" id="postal_code">
-    </div>
-    <div class="form-group">
-      <label for="search countryAddress">Country</label>
-      <input type="text" class="form-control countryAddress" id="country">
-    </div>
-  </form>
-  <button class="searchMap">Search</button>
-
-  <div id="map"></div>
-
   <div class="locationInfo"></div>
   <div class="pollingTimeTable"></div>
 
-
-
+  <div id="map"></div>
 
   <footer class="footer">
     <div class="titleWeb">a</div>

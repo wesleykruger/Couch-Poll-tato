@@ -27,10 +27,10 @@
 </head>
 
 <body>
-  <!-- Header Section -->
-  <header>
-    <div class="header container">
-      <a href="Auth.html">
+  <div class="background">
+    <!-- Header Section -->
+    <header>
+      <div class="header container">
         <div class="row">
           <div class="col-1 logoMargin"></div>
           <!-- Logo -->
@@ -43,116 +43,108 @@
           </div>
           <div class="col-1"></div>
         </div>
-      </a>
-    </div>
-    <!-- Header Botom Border -->
-    <div class="header-border"></div>
-  </header>
+      </div>
+      <!-- Header Botom Border -->
+      <div class="header-border"></div>
+    </header>
 
-  <br>
+    <br>
 
-  <!-- Registration Form -->
-  <section class="container registration">
-    <div class="col-md-offset-1 form">
-      <form class="form-horizontal" role="form">
-        <fieldset>
-          <!-- Form Name -->
-          <legend>Personal Information Details</legend>
-          <div class="row">
-            <div class="col-12 bannerArea"></div>
-          </div>
-          <div class="form-group">
-            <!-- Name Line -->
+    <!-- Registration Form -->
+    <section class="container registration">
+      <div class="col-md-offset-1 form">
+        <form class="form-horizontal" role="form">
+          <fieldset>
+            <!-- Form Name -->
+            <legend>Personal Information Details</legend>
             <div class="row">
-              <!-- First Name -->
-              <div class="col-sm-5 right-padding">
-                <input type="text" name="fistName" placeholder="First Name" class="inputReg firstNameRegister">
-              </div>
-              <!-- Middle Name -->
-              <div class="col-sm-2 no-padding">
-                <input type="text" name="middleName" placeholder="Middle Name" class="inputReg middleNameRegister">
-              </div>
-              <!-- Last Name -->
-              <div class="col-sm-5 left-padding">
-                <input type="text" name="lastName" placeholder="Last Name" class="inputReg lastNameRegister">
-              </div>
+              <div class="col-12 bannerArea"></div>
             </div>
-
-            <!-- Line 1 -->
-            <div class="row">
-              <!-- Address 1 -->
-              <div class="col-sm-8 right-padding">
-                <input type="text" name="addressLine1" placeholder="Address Line 1" class="inputReg address1Register">
-              </div>
-              <!-- City -->
-              <div class="col-sm-4 left-padding">
-                <input type="text" name="city" placeholder="City" class="inputReg cityRegister">
-              </div>
-            </div>
-
-            <!-- Line 2 -->
-            <div class="row">
-              <!-- Address 2 -->
-              <div class="col-sm-8 right-padding">
-                <input type="text" name="addressLine2" placeholder="Address Line 2" class="inputReg address2Register">
-              </div>
-              <!-- State -->
-              <div class="col-sm-2 no-padding">
-                <input type="text" name="state" placeholder="State" maxlength="10" class="inputReg stateRegister">
-              </div>
-              <!-- Zip -->
-              <div class="col-sm-2 left-padding">
-                <input type="text" name="postalCode" placeholder="Zip" class="inputReg zipRegister">
-              </div>
-            </div>
-
-            <!-- Line 3 -->
-            <div class="row">
-              <!-- Email -->
-              <div class="col-sm-4 right-padding">
-                <input type="text" placeholder="Email" class="inputReg emailRegister">
-              </div>
-              <!-- Date of Birth -->
-              <div class="col-sm-3 no-padding">
-                <input type="date" placeholder="Date Of Birth" class="inputReg DOBRegister">
-              </div>
-              <div class="col-sm-3 left-padding birth">(Date of Birth)</div>
-              <div class="col-sm-2 birth age"></div>
-            </div>
-
-            <!-- Line 4 -->
-            <div class="row padding">
-              <div class="col-sm-7">
-                <!-- Password -->
-                <div class="row right-padding">
-                  <input type="password" name="password" placeholder="(Password)" class="inputReg passwordRegister">
+            <div class="form-group">
+              <!-- Name Line -->
+              <div class="row">
+                <!-- First Name -->
+                <div class="col-sm-5 right-padding">
+                  <input type="text" name="fistName" placeholder="First Name" class="inputReg firstNameRegister">
                 </div>
-                <!-- Password Confirm-->
-                <div class="row right-padding">
-                  <input type="password" name="passwordConfirm" placeholder="(Password Confirm)" class="inputReg passwordRegisterConfirm">
+                <!-- Middle Name -->
+                <div class="col-sm-2 no-padding">
+                  <input type="text" name="middleName" placeholder="Middle Name" class="inputReg middleNameRegister">
                 </div>
-                <!-- Error Insert -->
-                <div class="row right-padding error">
+                <!-- Last Name -->
+                <div class="col-sm-5 left-padding">
+                  <input type="text" name="lastName" placeholder="Last Name" class="inputReg lastNameRegister">
                 </div>
               </div>
-              <!-- Submit Button-->
-              <div class="col-sm-1"></div>
-              <div class="col-sm-3 left-padding">
-                <button type="button" class="profileBtn createProfileBtn"><img class="btn" src="assets/images/createProfileBtn.png"></button>
+              <!-- Line 1 -->
+              <div class="row">
+                <!-- Address 1 -->
+                <div class="col-sm-8 right-padding">
+                  <input type="text" name="addressLine1" placeholder="Address Line 1" class="inputReg address1Register">
+                </div>
+                <!-- City -->
+                <div class="col-sm-4 left-padding">
+                  <input type="text" name="city" placeholder="City" class="inputReg cityRegister">
+                </div>
               </div>
-              <div class="col-sm-1"></div>
+              <!-- Line 2 -->
+              <div class="row">
+                <!-- Address 2 -->
+                <div class="col-sm-8 right-padding">
+                  <input type="text" name="addressLine2" placeholder="Address Line 2" class="inputReg address2Register">
+                </div>
+                <!-- State -->
+                <div class="col-sm-2 no-padding">
+                  <input type="state" name="state" placeholder="State" class="inputReg stateRegister">
+                </div>
+                <!-- Zip -->
+                <div class="col-sm-2 left-padding">
+                  <input type="text" name="postalCode" placeholder="Zip" class="inputReg zipRegister">
+                </div>
+              </div>
+              <!-- Line 3 -->
+              <div class="row">
+                <!-- Email -->
+                <div class="col-sm-4 right-padding">
+                  <input type="text" placeholder="Email" class="inputReg emailRegister">
+                </div>
+                <!-- Date of Birth -->
+                <div class="col-sm-3 no-padding">
+                  <input type="date" placeholder="Date Of Birth" class="inputReg DOBRegister">
+                </div>
+              </div>
+              <!-- Line 4 -->
+              <div class="row padding">
+                <div class="col-sm-7">
+                  <!-- Password -->
+                  <div class="row right-padding">
+                    <input type="password" name="password" placeholder="(Password)" class="inputReg passwordRegister">
+                  </div>
+                  <!-- Password Confirm-->
+                  <div class="row right-padding">
+                    <input type="password" name="passwordConfirm" placeholder="(Password Confirm)" class="inputReg passwordRegisterConfirm">
+                  </div>
+                  <!-- Error Insert -->
+                  <div class="row right-padding error">
+                  </div>
+                </div>
+                <!-- Submit Button-->
+                <div class="col-sm-1"></div>
+                <div class="col-sm-3 left-padding">
+                  <button type="button" class="profileBtn createProfileBtn"><img class="btn" src="assets/images/createProfileBtn.png"></button>
+                </div>
+              </div>
             </div>
-          </div>
-        </fieldset>
-      </form>
-    </div>
-  </section>
 
-  <br>
+          </fieldset>
+        </form>
+      </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="titleWeb">a</div>
-  </footer>
-
+    <br>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="titleWeb">a</div>
+    </footer>
+  </div>
 </body>

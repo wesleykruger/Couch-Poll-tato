@@ -22,10 +22,12 @@
   <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
   <script src="assets/javascript/login.js"></script>
 
+
 </head>
 
 
 <body>
+<div class="wrapper">
   <!-- Header Section -->
   <header>
     <div class="header container">
@@ -42,9 +44,10 @@
         <div class="col-1"></div>
       </div>
     </div>
-    <!-- Header Botom Border -->
-    <div class="header-border"></div>
+    <!-- Header Bottom Border -->
   </header>
+  <div class="header-border"></div>
+
 
   <!-- Login Section-->
   <div class="container">
@@ -53,44 +56,45 @@
         <div class="card card-signin my-5">
           <div class="card-body">
             <!-- Title -->
-            <h5 class="card-title text-center">Sign In</h5>
-            <div class="col-12 bannerArea"></div>
+            <h5 class="card-title text-center blue">Sign In</h5>
             <form class="form-signin">
               <!-- Email -->
               <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control loginEmail" placeholder="Email address" required autofocus>
-                <label for="inputEmail">Email Address</label>
+                <input type="email" id="inputEmail" class="form-control inputReg loginEmail" placeholder="Email address" required
+                  autofocus>
               </div>
               <!-- Password -->
               <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control loginPassword" placeholder="Password" required>
-                <label for="inputPassword">Password</label>
+                <input type="password" id="inputPassword" class="form-control inputReg loginPassword" placeholder="Password" required>
               </div>
               <!-- Remember Password Box -->
               <div class="custom-control custom-checkbox mb-3">
                 <input type="checkbox" class="custom-control-input" id="customCheck1">
-                <label class="custom-control-label" for="customCheck1">Remember password</label>
+                <label class="custom-control-label blue" for="customCheck1">Remember password</label>
               </div>
               <div class="row">
                 <!-- Log In Button -->
-                <div class="col-1"></div>
                 <div class="col-4">
-                  <button type="button" class="btnLogin"><img class="btn" src="assets/images/loginBtn.png"></button>
+                  <button class="btnLogin loginBtn" type="button"><img class="btn" src="assets/images/loginBtn.png"></button>
                 </div>
-                <div class="col-2 center">or</div>
+                <div class="col-4 center blue">or</div>
                 <!-- Register Button -->
                 <div class="col-4">
-                  <a type="button" href="Profile.html">
-                    <button type="button" class="registerBtn"><img class="btn" src="assets/images/createProfileBtn.png"></button>
+                  <a type="submit" href="Profile.html" type="submit">
+                    <i class="fa fa-search"></i>
+                    <button type="button" class="registerBtn"><img class="btn" src="assets/images/signupBtn.png"></button>
                   </a>
                 </div>
-                <div class="col-1"></div>
               </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <br>
+  <div class="push"></div>
+</div>
+  <!-- Footer-->
   <footer class="footer">
     <div class="titleWeb">a</div>
   </footer>
