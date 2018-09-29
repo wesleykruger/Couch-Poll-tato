@@ -19,23 +19,6 @@
   <title> Politics...From Your Couch</title>
 
 
-  <style>
-    .jumbotron{
-        background-color:#2E2D88;
-        color:white;
-    }
-    /* Adds borders for tabs */
-    .tab-content {
-        border-left: 1px solid #ddd;
-        border-right: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
-        padding: 10px;
-    }
-    .nav-tabs {
-        margin-bottom: 0;
-    }
-    </style>
-
 
 </head>
 
@@ -71,7 +54,8 @@
           <div class="form-group ">
             <ol class="">
               <li class="breadcrumb-item center"><a class="blue legends" href="#">
-                  <img class="checkbox" src="assets/images/uncheckedBallot.png">
+                  <img class="checkbox" src="assets/images/uncheckedBallot.png" onmouseover="onHover();" 
+                  onmouseout="offHover();" />
                   Find Your Current Administration
                 </a>
               </li>
@@ -111,5 +95,15 @@
 
 
 </body>
+<script>
+  function onHover()
+{
+    $(".checkbox").attr('src', 'assets/images/uncheckedBallot.png');
+}
 
+function offHover()
+{
+    $(".heckbox").attr('src', 'assets/images/checkedBallot.png');
+}
+</script>
 </html>
