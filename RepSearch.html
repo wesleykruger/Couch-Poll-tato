@@ -47,44 +47,48 @@
         <div class="container rep-search-cont">
             <legend class="repCenter blue">Find Your Representatives</legend>
 
-    <h1 class="repsearch-h1">Find Your Representatives</h1>
-    
-    <div class="row rep-input">
-        <div class="col-3 offset-3">Street Address:
-            <input type="text" class="address"></input>
+            <div class="row">
+                <div class="col-8 right-padding ">
+                    <input type="text" class="address inputReg" placeholder="Street Address"></input>
+                </div>
+                <div class="col-4 left-padding ">
+                    <input type="text" class="city inputReg" placeholder="City"></input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 right-padding ">
+                    <input type="text" class="state inputReg" maxlength="2" size="6" placeholder="State"></input>
+                </div>
+                <div class="col-3 no-padding ">
+                    <input type="text" value="US" class="country inputReg" placeholder="US"></input>
+                </div>
+                <div class="col-6 ">
+                    <button type="button" class="btn btn-primary submit spaceBtn"><img src="assets/images/searchBtn.png"
+                            class="btn"></button>
+                </div>
+            </div>
         </div>
-        <div class="col-3 offset-3">City<br>
-            <input type="text" class="city"></input>
+        <div class="row">
+
         </div>
-    </div>
-    <div class="row rep-input">
-        <div class="col-3 offset-3">State:
-            <br>
-            <input type="text" class="state" maxlength="2" size="6"></input>
-        </div>
-        <div class="col-3 offset-3">Country:
-            <input type="text" value="US" class="country"></input>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-2 offset-6 submit-rep">
-        <button type="button" class="btn btn-primary submit">Search</button>
-    </div>
-</div>
-    <table class="table table-hover rep-table">
-        <thead>
-            <tr>
-                <th scope="col" class="title-rep">Image</th>
-                <th scope="col" class="title-rep">Name</th>
-                <th scope="col" class="title-rep">Office</th>
-                <th scope="col" class="title-rep">Party</th>
-                <th scope="col" class="title-rep">Address</th>
-                <th scope="col" class="title-rep">Phone Number</th>
-                <th scope="col" class="title-rep">Web Page</th>
-                <th scope="col" class="title-rep">Social Media</th>
-            </tr>
-        </thead>
-        <tbody class="representatives">
+        <table class="table table-hover rep-table">
+            <thead>
+                <tr>
+                    <th scope="col" class="title-rep">Image</th>
+                    <th scope="col" class="title-rep">Name</th>
+                    <th scope="col" class="title-rep">Office</th>
+                    <th scope="col" class="title-rep">Party</th>
+                    <th scope="col" class="title-rep">Address</th>
+                    <th scope="col" class="title-rep">Phone Number</th>
+                    <th scope="col" class="title-rep">Web Page</th>
+                    <th scope="col" class="title-rep">Social Media</th>
+                </tr>
+            </thead>
+            <tbody class="representatives">
+            </tbody>
+        </table>
+
+        <div class="push"></div>
 
     </section>
 
