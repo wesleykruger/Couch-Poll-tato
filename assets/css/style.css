@@ -1,8 +1,42 @@
+/* For Sticky Footer*/
+html,body{
+  height: 100%;
+  margin:0;
+}
+
+
+/* For Formatting */
+
+  .no-padding {
+    padding:0px;
+  }
+
+  .right-padding {
+    padding-right:0px;
+  }
+  .left-padding {
+    padding-left:0px;
+  }
+  .padding {
+    padding-left: 15px; 
+ }
+
+
+/* Font Styling */
+
+.blue{
+  color: rgb(46, 89, 143);
+}
+
+
+.contentAlign{
+  align-content: center;
+}
 
 /* header */
 .header{
   max-width:620px;
-  padding-top:20px;
+  padding-top:55px;
   margin:0 auto;
   border:0;
   align-content: center;
@@ -118,10 +152,31 @@ padding-left: 5px;
 
 body {
   background-color: rgb(235, 234, 217);
-
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/uncle-sam.png);
+  background-position: top;
+  align-content: center;
+  min-height: 100%;
   /*background-color: #4aaaa5; */
   margin: 0 auto;
   padding: 0;
+}
+
+.map{
+max-width: 960px;
+}
+
+
+/* Input Designs */
+.inputReg{
+  width: 100%;
+  color:rgb(148, 15, 21);
+  background-color:  rgb(235, 234, 217);
+}
+
+::placeholder{
+color: rgb(148, 15, 21)
 }
 
 /* footer */
@@ -140,10 +195,20 @@ body {
 .footer {
 background-color: rgb(46, 89, 143);
 
-max-width: 100%;
+min-width: 100%;
 max-height: 75px;
 align-content: center;
 
+}
+
+.wrapper{
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+
+.footer,
+.push {
+  height: 50px;
 }
 
 /*  background-image: url("../images/Couch-PollTato.png");
