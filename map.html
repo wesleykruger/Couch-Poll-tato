@@ -71,6 +71,7 @@
       <div class="row padding blue">
         <h3>Poll Map</h3>
       </div>
+      <div class="noData"></div>
 
       <div class="row">
         <div class="padding" id="locationField">
@@ -79,8 +80,11 @@
       </div>
       <form>
         <div class="row">
-          <div class="col-12">
-            <input placeholder="Address Line 1" type="text" class="inputReg streetAddress" id="street_number">
+          <div class="col-4">
+            <input placeholder="Address Line 1" type="text" class="inputReg streetAddressNumber" id="street_number">
+          </div>
+          <div class="col-8">
+            <input placeholder="Address Line 2" type="text" class="inputReg streetAddressRoute" id="route">
           </div>
         </div>
         <div class="row">
@@ -104,6 +108,7 @@
 
     <div class="push"></div>
   </div>
+
   <div class="locationInfo"></div>
   <div class="pollingTimeTable"></div>
 
